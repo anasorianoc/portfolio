@@ -10,7 +10,7 @@ function initNavScroll() {
     if (!nav) return;
 
     const y = window.scrollY;
-    const menuOpen = nav.querySelector('.menu__links.open');
+    const menuOpen = document.getElementById('navDrawer')?.classList.contains('is-open');
 
     nav.classList.toggle('scrolled', y > THRESHOLD);
 
@@ -37,17 +37,37 @@ function initNavScroll() {
 // ─── Mobile burger ────────────────────────────────────────────
 function initMenu() {
   const nav = document.getElementById('nav');
+  const drawer = document.getElementById('navDrawer');
   const burger = document.getElementById('burger');
   const navLinks = document.getElementById('navLinks');
+  const MOBILE_NAV_MQ = window.matchMedia('(max-width: 768px)');
+
+  function setMenuOpen(open) {
+    if (!drawer || !burger || !navLinks) return;
+    drawer.classList.toggle('is-open', open);
+    drawer.setAttribute('aria-hidden', String(!open));
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    document.body.classList.toggle('menu-nav-open', open);
+    if (open) nav?.classList.remove('menu--hidden');
+  }
 
   burger?.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    burger.setAttribute('aria-expanded', String(open));
-    if (open) nav?.classList.remove('menu--hidden');
+    setMenuOpen(!drawer.classList.contains('is-open'));
   });
 
   navLinks?.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => navLinks.classList.remove('open'));
+    a.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+      setMenuOpen(false);
+    }
+  });
+
+  MOBILE_NAV_MQ.addEventListener('change', e => {
+    if (!e.matches) setMenuOpen(false);
   });
 }
 

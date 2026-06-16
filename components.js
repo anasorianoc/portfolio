@@ -29,17 +29,22 @@ function renderMenu() {
           <span class="menu__tagline">Product Designer UX / UI · Barcelona</span>
         </div>
         <div class="menu__actions">
-          <ul class="menu__links" id="navLinks">
+          <ul class="menu__links" id="navLinksDesktop">
             ${links}
-            <li class="menu__links-cta"><a href="#footer" class="btn btn--primary">¿Hablamos?</a></li>
           </ul>
           <a href="#footer" class="btn btn--primary menu__cta">¿Hablamos?</a>
-          <button class="menu__burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <button class="menu__burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navDrawer">
             <span></span><span></span><span></span>
           </button>
         </div>
       </div>
-    </nav>`;
+    </nav>
+    <div class="menu__drawer" id="navDrawer" aria-hidden="true">
+      <ul class="menu__drawer-links" id="navLinks">
+        ${links}
+        <li class="menu__links-cta"><a href="#footer" class="btn btn--primary">¿Hablamos?</a></li>
+      </ul>
+    </div>`;
 }
 
 function renderFooter() {
