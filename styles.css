@@ -205,6 +205,13 @@ button { cursor: pointer; background: none; border: none; font: inherit; }
   background: rgba(255, 255, 255, .92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
+  transform: translateY(0);
+  transition: transform .35s ease;
+  will-change: transform;
+}
+
+.menu.menu--hidden {
+  transform: translateY(-100%);
 }
 
 .menu__inner {
@@ -522,10 +529,6 @@ button { cursor: pointer; background: none; border: none; font: inherit; }
 
 .other-card.is-active .other-card__title {
   white-space: normal;
-}
-
-.other-projects__all {
-  align-self: flex-start;
 }
 
 body.modal-open {

@@ -55,7 +55,7 @@ function renderFooter() {
           de diseño como posiciones en equipos de producto.
         </p>
         <div class="site-footer__links">
-          <a href="https://linkedin.com/in/asorianocabello" target="_blank" rel="noopener" class="site-footer__link">${phIcon('arrow-right')} Linkedin</a>
+          <a href="https://www.linkedin.com/in/anasorianocabello/" target="_blank" rel="noopener" class="site-footer__link">${phIcon('arrow-right')} Linkedin</a>
           <a href="mailto:asorianocabello@gmail.com" class="site-footer__link">${phIcon('arrow-right')} asorianocabello@gmail.com</a>
         </div>
       </div>

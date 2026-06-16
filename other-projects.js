@@ -391,21 +391,10 @@ function initProjectModal() {
   });
 }
 
-function initOtherProjectsAll() {
-  const btn = document.getElementById('otherProjectsAll');
-  const track = document.getElementById('otherProjectsTrack');
-  if (!btn || !track) return;
-
-  btn.addEventListener('click', () => {
-    track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
-  });
-}
-
 function initOtherProjects() {
   renderOtherProjectCards();
   initOtherProjectsCarousel();
   initProjectModal();
-  initOtherProjectsAll();
 }
 
 if (typeof window !== 'undefined') {

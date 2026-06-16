@@ -1,17 +1,49 @@
-// ─── Nav scroll border ───────────────────────────────────────
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav?.classList.toggle('scrolled', window.scrollY > 10);
-}, { passive: true });
+// ─── Nav: hide on scroll down, show on scroll up ───────────────
+function initNavScroll() {
+  let lastY = window.scrollY;
+  let ticking = false;
+  const THRESHOLD = 10;
+  const MIN_DELTA = 4;
+
+  function update() {
+    const nav = document.getElementById('nav');
+    if (!nav) return;
+
+    const y = window.scrollY;
+    const menuOpen = nav.querySelector('.menu__links.open');
+
+    nav.classList.toggle('scrolled', y > THRESHOLD);
+
+    if (menuOpen || y <= THRESHOLD) {
+      nav.classList.remove('menu--hidden');
+    } else if (y - lastY > MIN_DELTA) {
+      nav.classList.add('menu--hidden');
+    } else if (lastY - y > MIN_DELTA) {
+      nav.classList.remove('menu--hidden');
+    }
+
+    lastY = y;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+}
 
 // ─── Mobile burger ────────────────────────────────────────────
 function initMenu() {
+  const nav = document.getElementById('nav');
   const burger = document.getElementById('burger');
   const navLinks = document.getElementById('navLinks');
 
   burger?.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');
     burger.setAttribute('aria-expanded', String(open));
+    if (open) nav?.classList.remove('menu--hidden');
   });
 
   navLinks?.querySelectorAll('a').forEach(a => {
@@ -156,6 +188,7 @@ function initCursorBlob() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initNavScroll();
   initMenu();
   initFooterScroll();
   initFadeObserver();
