@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rediseño app móvil · Ana Soriano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400&family=Manrope:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <div id="site-menu" data-active="work"></div>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <div class="cs-hero">
+      <div class="cs-hero__wrap">
+        <a href="index.html" class="cs-back cs-back--label icon-inline" data-fade>
+          <i class="ph ph-arrow-left" aria-hidden="true"></i> Volver
+        </a>
+        <p class="cs-hero__category" data-fade>Sector legal · Mobile · UX/UI</p>
+        <h1 class="cs-hero__title" data-fade>
+          Rediseño de una aplicación móvil para un despacho de abogados
+        </h1>
+      </div>
+
+      <div class="cs-hero__img" data-fade>
+        <img
+          src="assets/abogados/abogados-portada.jpg"
+          alt="Rediseño de la aplicación móvil legal"
+        />
+      </div>
+    </div>
+
+
+   
+
+    <!-- ── BODY ── -->
+    <div class="cs-body">
+      
+ <!-- Contexto -->
+      <section class="cs-section cs-section--intro" data-fade>
+        <div class="cs-section__meta">
+
+          <div class="cs-meta-group">
+            <span class="cs-meta-group__label">Disciplinas</span>
+            <div class="cs-meta-group__content">
+              Investigación UX<br>
+              Arquitectura de la información<br>
+              Diseño UX/UI<br>
+              Design System<br>
+              Accesibilidad (WCAG AA)
+            </div>
+          </div>
+
+          <div class="cs-meta-group">
+            <span class="cs-meta-group__label">Industria</span>
+            <div class="cs-meta-group__content">
+              Despacho de abogados
+            </div>
+          </div>
+
+          <div class="cs-meta-group">
+            <span class="cs-meta-group__label">Año</span>
+            <div class="cs-meta-group__content">
+              2026
+            </div>
+          </div>
+        </div>
+        <div class="cs-section__content">
+          <p>
+            Una empresa del sector legal se encontraba en la necesidad de rediseñar su aplicación móvil para mejorar la experiencia de usuario y la eficiencia de sus servicios
+          </p>
+          <p>
+            Querían unos resultados rápidos sin invertir demasiado en investigación, por lo que decidí realizar una auditoria de experiencia de usuario para el rediseño y actualización de los visuales.
+          </p>
+        </div>
+      </section>
+
+      <!-- Investigación -->
+      <section class="cs-section" data-fade>
+        <div class="cs-section__label">Investigación</div>
+        <div class="cs-section__content">
+          <h2 class="cs-h2">¿Cuál es el problema?</h2>
+          <p>
+            El proyecto no tenía tiempo suficiente ni recursos para hacer una amplia investigación,
+            pero para evitar diseñar a ciegas utilicé algunos métodos para obtener información sobre
+            las opiniones de los clientes:
+          </p>
+          <ul class="cs-list">
+            <li><strong>Información interna:</strong> pregunté a la empresa qué problemas veían ellos para tener que hacer un rediseño, también si el equipo de atención al cliente o abogados habían escuchado opiniones sobre la app.</li>
+            <li><strong>Reseñas en la app store:</strong> miré la store de la aplicación para leer las reseñas.</li>
+            <li><strong>Tests de guerrilla:</strong> hice 5 tests con familiares, compañeros de trabajo y amigos, pidiéndoles que hagan alguna de las tareas que se les pide a los clientes mientras comentaban sus pensamientos en voz alta.</li>
+            <li><strong>Evaluación heurística:</strong> hice una evaluación para identificar problemas de usabilidad.</li>
+          </ul>
+
+          <div class="cs-figure" style="margin-top:.5rem">
+            <div class="cs-figure__img">
+              <img
+                src="assets/abogados/antes2.jpg"
+                alt="Estado anterior de la aplicación móvil"
+              />
+            </div>
+            <figcaption>Estado anterior de la app — antes del rediseño</figcaption>
+          </div>
+
+          <h3 class="cs-h3">Evaluación heurística</h3>
+          <p>Problemas identificados durante la evaluación:</p>
+          <ul class="cs-list cs-list--compact">
+            <li>Inconsistencias en el uso de valor de líneas y colores, lo que genera confusión visual</li>
+            <li>El tamaño de la tipografía es demasiado pequeño, dificultando la lectura</li>
+            <li>Los botones presentan una jerarquía similar, lo que hace difícil diferenciar cuáles son las acciones primarias y secundarias, afectando la claridad en la toma de decisiones del usuario</li>
+            <li>Falta de una jerarquía visual clara, lo que dificulta la navegación</li>
+            <li>El menú es poco visible, lo que complica el acceso a las funciones principales y el usuario no sabe identificar dónde se encuentra en cada momento</li>
+            <li>No se muestra de manera clara en qué fase del procedimiento se encuentra el usuario y cuáles son los pasos que tiene que seguir</li>
+          </ul>
+
+          <h3 class="cs-h3">Problemas identificados</h3>
+          <p>Con estos métodos llegué a identificar 3 problemas claves:</p>
+          <div class="cs-problems">
+            <div class="cs-problem">
+              <h3>Información poco clara</h3>
+              <p>
+                Los usuarios no entendían bien el proceso legal ni los pasos a seguir, lo que generaba
+                confusión y necesidad de soporte adicional.
+              </p>
+            </div>
+            <div class="cs-problem">
+              <h3>Diseño visual desfasado</h3>
+              <p>
+                La apariencia de la aplicación no solo se veía anticuada, sino que también contribuía
+                a la dificultad de uso. La falta de jerarquía visual, el uso ineficiente del espacio
+                y una paleta de colores poco diferenciada hacían que la información no destacara
+                adecuadamente, afectando la usabilidad y percepción del producto.
+              </p>
+            </div>
+            <div class="cs-problem">
+              <h3>Navegación confusa</h3>
+              <p>
+                La estructura de la aplicación no permitía a los usuarios localizar fácilmente su fase
+                actual dentro del procedimiento ni acceder rápidamente a información clave, como pagos
+                y tickets. La distribución de los menús y opciones resultaba poco intuitiva, lo que
+                dificultaba la interacción y aumentaba la frustración.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Definición -->
+      <section class="cs-section" data-fade>
+        <div class="cs-section__label">Definición</div>
+        <div class="cs-section__content">
+          <h2 class="cs-h2">Estructura de la aplicación</h2>
+          <h3 class="cs-h3">Historias de usuario</h3>
+          <p>
+            Para ayudar a entender y definir los requisitos de los usuarios creé varias historias de
+            usuario con sus necesidades.
+          </p>
+          <div class="cs-stories-grid">
+            <img src="assets/abogados/historias/historia-de-usuario-1.webp" alt="Historia de usuario 1" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-2.webp" alt="Historia de usuario 2" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-3.webp" alt="Historia de usuario 3" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-4.webp" alt="Historia de usuario 4" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-5.webp" alt="Historia de usuario 5" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-6.webp" alt="Historia de usuario 6" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-7.webp" alt="Historia de usuario 7" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-8.webp" alt="Historia de usuario 8" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-9.webp" alt="Historia de usuario 9" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Soluciones -->
+      <section class="cs-section cs-section--full" data-fade>
+        <div class="cs-section__label">Soluciones</div>
+        <div class="cs-section__content cs-section__content--wide">
+          <h2 class="cs-h2">Diseño final</h2>
+
+          <div class="cs-feature-rows">
+          <article class="cs-feature-row">
+            <div class="cs-feature-row__media">
+              <div class="cs-video">
+                <video autoplay loop muted playsinline preload="metadata" aria-label="Pantalla principal de la app">
+                  <source src="assets/abogados/videos/principal-app.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <div class="cs-feature-row__body">
+              <h3 class="cs-h3">Pantalla principal</h3>
+              <p>
+                Simplifiqué la pantalla principal para que los usuarios accedan rápidamente a las
+                funciones clave sin distracciones. Destaqué las opciones más utilizadas y agregué un
+                acceso directo a las consultas en curso. Además, optimicé el diseño visual con una
+                jerarquía clara y elementos bien espaciados para mejorar la legibilidad.
+              </p>
+              <ul class="cs-feature__list cs-feature__list--checks">
+                <li><i class="ph ph-check" aria-hidden="true"></i> Accesos directos a funciones esenciales</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> Diseño más limpio y moderno</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> Información relevante a primera vista</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="cs-feature-row cs-feature-row--reverse">
+            <div class="cs-feature-row__media">
+              <div class="cs-video">
+                <video autoplay loop muted playsinline preload="metadata" aria-label="Seguimiento del proceso">
+                  <source src="assets/abogados/videos/procedimiento.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <div class="cs-feature-row__body">
+              <h3 class="cs-h3">Seguimiento del proceso</h3>
+              <p>
+                Uno de los principales problemas detectados fue la falta de claridad en el estado de
+                los trámites. Para solucionarlo, creé una pantalla que muestra los pasos del proceso,
+                con su descripción, tiempos aproximados que dura cada paso y su estado actual. También
+                añadí una sección con la fase en la que se encuentra el usuario, indicando si tiene
+                que realizar alguna acción. Además incorporé un botón de contacto por si hay alguna duda.
+              </p>
+              <ul class="cs-feature__list cs-feature__list--checks">
+                <li><i class="ph ph-check" aria-hidden="true"></i> Pasos del proceso con descripciones, tiempos estimados y estados visibles (En proceso, Completado)</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> Sección de fase actual con instrucciones a realizar</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> Botón de contacto para resolver dudas</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="cs-feature-row">
+            <div class="cs-feature-row__media">
+              <div class="cs-video">
+                <video autoplay loop muted playsinline preload="metadata" aria-label="Pantalla de documentación">
+                  <source src="assets/abogados/videos/documentos.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <div class="cs-feature-row__body">
+              <h3 class="cs-h3">Documentación</h3>
+              <p>
+                El proceso de carga de documentos y formularios era confuso, lo que generaba errores
+                frecuentes. Rediseñé la interfaz con instrucciones paso a paso y validaciones en tiempo
+                real para evitar problemas. Además, mejoré la visualización de los documentos subidos.
+              </p>
+              <ul class="cs-feature__list cs-feature__list--checks">
+                <li><i class="ph ph-check" aria-hidden="true"></i> Estado del documento, si está pendiente o completado</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> Ejemplo de documento y explicación de lo que tiene que subir</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> Opción de escanear documentos y luego editar la información</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="cs-feature-row cs-feature-row--reverse">
+            <div class="cs-feature-row__media">
+              <div class="cs-video">
+                <video autoplay loop muted playsinline preload="metadata" aria-label="Pantalla de consultas">
+                  <source src="assets/abogados/videos/consultas.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <div class="cs-feature-row__body">
+              <h3 class="cs-h3">Consultas</h3>
+              <p>
+                Reorganicé la sección de consultas para que los usuarios puedan hacer preguntas a los
+                abogados de forma más intuitiva. Simplifiqué el formulario de consulta y añadí respuestas
+                rápidas basadas en preguntas frecuentes para agilizar el proceso.
+              </p>
+              <ul class="cs-feature__list cs-feature__list--checks">
+                <li><i class="ph ph-check" aria-hidden="true"></i> Formulario más accesible y directo</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> Preguntas frecuentes para resolver dudas al instante</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> Chat con abogados con respuestas en tiempo real</li>
+              </ul>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Aprendizajes -->
+      <section class="cs-section" data-fade>
+        <div class="cs-section__label">Conclusiones</div>
+        <div class="cs-section__content">
+          <h2 class="cs-h2">Aprendizajes</h2>
+          <p>
+            Este proyecto tenía varios retos que afrontar, entre ellos la falta de tiempo y recursos
+            que había. Estas son algunas de las conclusiones y aprendizajes al haber podido realizar
+            este rediseño:
+          </p>
+          <ul class="cs-list">
+            <li><strong>Comunicación con stakeholders.</strong> Preguntar al cliente sobre la intención del rediseño y recopilar opiniones de los usuarios fue fundamental para identificar problemas de usabilidad.</li>
+            <li><strong>Adaptar la investigación.</strong> Dado que no había tiempo para una investigación extensa, fue necesario buscar métodos rápidos y efectivos para detectar problemas sin comprometer la calidad del análisis.</li>
+            <li><strong>Retroalimentación con desarrollo.</strong> Se trabajó en conjunto con el equipo de desarrollo, entregando las pantallas en fases para agilizar la implementación. Definir diferentes estados para los componentes y mantener una comunicación fluida fueron aspectos clave en este proceso.</li>
+            <li><strong>La importancia para el usuario de saber en qué momento del proceso se encuentra.</strong> En el ámbito legal, los trámites pueden ser largos, y los usuarios no quieren sentirse perdidos o en espera indefinida. Mostrar en qué etapa se encuentra su caso y cuánto tiempo puede tomar cada paso resultó ser un factor crucial para mejorar la experiencia del usuario.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Nav entre proyectos -->
+      <div class="cs-nav-projects" data-fade>
+        <a href="proyecto-data.html" class="cs-nav-projects__prev">
+          <span class="cs-nav-projects__dir"><i class="ph ph-arrow-left" aria-hidden="true"></i> Anterior</span>
+          <span class="cs-nav-projects__name">Dat·A — Branding y diseño web</span>
+        </a>
+        <a href="proyecto-filtros.html" class="cs-nav-projects__next">
+          <span class="cs-nav-projects__dir">Siguiente <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+          <span class="cs-nav-projects__name">Rediseño de la experiencia de filtrado</span>
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="icons.js"></script>
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

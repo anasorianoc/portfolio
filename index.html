@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana Soriano — Product Designer UX/UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400&family=Manrope:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <div id="site-menu" data-active="work"></div>
+
+  <!-- HERO (Page Hero component) -->
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="hero__title" data-fade>
+        Product designer<br />& UX/UI
+      </h1>
+      <p class="hero__sub" data-fade data-fade-delay="1">
+        I design digital products with a focus on usability, visual craft and thoughtful interaction.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="projects wrap">
+
+    <article class="proj-item" data-fade data-fade-delay="1">
+      <a href="proyecto-data.html" class="proj-item__img-wrap">
+        <div class="proj-item__img">
+          <img src="assets/data/img-data.jpg" alt="Dat·A — Branding y diseño web" />
+        </div>
+      </a>
+      <div class="proj-item__meta">
+        <p class="proj-item__title">Creación del estilo visual de marca, diseño web y flujo del proceso de compra</p>
+        <span class="proj-item__tag">INDUSTRIA</span>
+      </div>
+    </article>
+
+    <article class="proj-item" data-fade data-fade-delay="2">
+      <a href="proyecto-app-legal.html" class="proj-item__img-wrap">
+        <div class="proj-item__img">
+          <img src="assets/abogados/abogados-portada.jpg" alt="Rediseño app móvil despacho de abogados" />
+        </div>
+      </a>
+      <div class="proj-item__meta">
+        <p class="proj-item__title">Rediseño de una aplicación móvil para un despacho de abogados</p>
+        <span class="proj-item__tag">LEGAL</span>
+      </div>
+    </article>
+
+    <article class="proj-item" data-fade data-fade-delay="1">
+      <a href="proyecto-filtros.html" class="proj-item__img-wrap">
+        <div class="proj-item__img">
+          <img src="assets/filtros/card-proyecto-filtros.jpg" alt="Proyecto filtros" />
+        </div>
+      </a>
+      <div class="proj-item__meta">
+        <p class="proj-item__title">Rediseño de la experiencia de filtrado</p>
+        <span class="proj-item__tag">ECOMMERCE DE VIAJES</span>
+      </div>
+    </article>
+
+    <article class="proj-item" data-fade data-fade-delay="2">
+      <a href="#" class="proj-item__img-wrap proj-item__img-wrap--locked" id="lockedCaseTrigger" aria-label="Case study privado — solicitar acceso">
+        <div class="proj-item__img proj-item__img--placeholder"></div>
+      </a>
+      <div class="proj-item__meta">
+        <p class="proj-item__title">Próximo proyecto — título por definir</p>
+        <span class="proj-item__tag">PRÓXIMAMENTE</span>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- OTROS PROYECTOS (Figma 159:6216) -->
+  <section class="other-projects wrap" aria-labelledby="other-projects-title">
+    <h2 class="other-projects__title" id="other-projects-title" data-fade>
+      Otros proyectos gráficos, para experimentar o por pura diversión
+    </h2>
+
+    <div class="other-projects__viewport" data-fade data-fade-delay="1">
+      <div class="other-projects__track" id="otherProjectsTrack" role="list"></div>
+    </div>
+
+    <button type="button" class="btn btn--secondary other-projects__all" id="otherProjectsAll" data-fade data-fade-delay="2" hidden>
+      Ver todos
+    </button>
+  </section>
+
+  <div class="project-modal" id="projectModal" hidden aria-hidden="true">
+    <div class="project-modal__backdrop" aria-hidden="true"></div>
+    <div class="project-modal__stage">
+      <div
+        class="project-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="projectModalTitle"
+      >
+        <div class="project-modal__head">
+          <button type="button" class="project-modal__close" id="projectModalClose" aria-label="Cerrar proyecto">
+            <i class="ph ph-x" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="project-modal__content" id="projectModalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-modal" id="lockedCaseModal" hidden aria-hidden="true">
+    <div class="project-modal__backdrop" aria-hidden="true"></div>
+    <div class="project-modal__stage">
+      <div
+        class="project-modal__panel project-modal__panel--compact"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lockedCaseTitle"
+      >
+        <div class="project-modal__head">
+          <button type="button" class="project-modal__close" id="lockedCaseClose" aria-label="Cerrar">
+            <i class="ph ph-x" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="project-modal__content">
+          <div class="project-modal__inner project-modal__inner--compact">
+            <h2 class="project-modal__title" id="lockedCaseTitle">Case study privado</h2>
+            <p class="locked-case-modal__text">
+              Para poder ver este case study, ponte en contacto conmigo y te lo comparto con gusto.
+            </p>
+            <div class="locked-case-modal__actions">
+              <a href="mailto:asorianocabello@gmail.com" class="btn btn--primary">Enviar email</a>
+              <a href="#footer" class="btn btn--secondary">Ver contacto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <div class="cursor-blob" id="cursorBlob">Ver</div>
+  <script src="icons.js"></script>
+  <script src="other-projects.js"></script>
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

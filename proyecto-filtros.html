@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dat·A — Branding y diseño web · Ana Soriano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400&family=Manrope:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+
+  <div id="site-menu" data-active="work"></div>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <div class="cs-hero">
+      <div class="cs-hero__wrap">
+        <a href="index.html" class="cs-back cs-back--label icon-inline" data-fade>
+          <i class="ph ph-arrow-left" aria-hidden="true"></i> Volver
+        </a>
+        <p class="cs-hero__category" data-fade>ECOMMERCE DE VIAJES</p>
+        <h1 class="cs-hero__title" data-fade>
+          Rediseño de la experiencia de filtrado
+        </h1>
+      </div>
+
+      <div class="cs-hero__img" data-fade>
+        <img src="assets/filtros/card-proyecto-filtros.jpg" alt="cover project filters" />
+      </div>
+    </div>
+
+    <!-- ── BODY ── -->
+    <div class="cs-body">
+
+      <!-- Contexto -->
+      <section class="cs-section cs-section--intro" data-fade>
+        <div class="cs-section__meta">
+
+          <div class="cs-meta-group">
+            <span class="cs-meta-group__label">Disciplinas</span>
+            <div class="cs-meta-group__content">
+              Diseño UX/UI<br>
+              Design System<br>
+              Diseño basado en datos<br>
+              Accesibilidad (WCAG AA)
+            </div>
+          </div>
+
+          <div class="cs-meta-group">
+            <span class="cs-meta-group__label">Industria</span>
+            <div class="cs-meta-group__content">
+              Ecommerce de viajes
+            </div>
+          </div>
+
+          <div class="cs-meta-group">
+            <span class="cs-meta-group__label">Año</span>
+            <div class="cs-meta-group__content">
+              2026
+            </div>
+          </div>
+        </div>
+        <div class="cs-section__content">
+          <p>
+            Weekendesk es una plataforma de viajes y escapadas con un catálogo amplio de alojamientos, experiencias y
+            paquetes en distintos mercados y categorías de producto.
+          </p>
+          <p>
+            Como parte de un proceso más amplio de evolución del producto y del design system, participé en el rediseño
+            del sistema de filtros de la plataforma, con el objetivo de mejorar la usabilidad, la consistencia y la
+            escalabilidad de la experiencia de búsqueda.
+          </p>
+          <p>
+            El proyecto implicó una colaboración constante con los equipos de producto, tecnología y data para redefinir
+            cómo los usuarios exploran y refinan resultados dentro de una plataforma compleja. </p>
+        </div>
+      </section>
+      <div class="cs-figure">
+        <div class="cs-figure__img">
+          <img src="assets/filtros/img-filtros-desktop.jpg" alt="Filtros desktop" />
+        </div>
+        <figcaption></figcaption>
+      </div>
+      <!-- El reto -->
+      <section class="cs-section" data-fade>
+        <div>
+          <h2 class="cs-h2">El reto</h2>
+        </div>
+        <div class="cs-section__content">
+          <p>
+            El sistema de filtros existente había evolucionado de forma poco estructurada con el tiempo, generando
+            varios problemas tanto a nivel UX como técnico:
+          </p>
+          <div class="cs-insights">
+            <div class="cs-insight">
+              <span class="cs-insight__num">UX Design</span>
+              <p class="cs-insight__text">Inconsistencias entre productos y páginas, se mostraban diferentes filtros
+                dependiendo de la página de búsqueda</p>
+            </div>
+            <div class="cs-insight">
+              <span class="cs-insight__num">Design System</span>
+              <p class="cs-insight__text">Jerarquías poco claras</p>
+            </div>
+            <div class="cs-insight">
+              <span class="cs-insight__num">UI Design</span>
+              <p class="cs-insight__text">Filtros duplicados y con funcionalidades poco claras</p>
+            </div>
+            <div class="cs-insight">
+              <span class="cs-insight__num">UI Design</span>
+              <p class="cs-insight__text">En mobile, mucho espacio ocupado en pantalla</p>
+            </div>
+          </div>
+          <p>
+            Además, la plataforma estaba pasando por una evolución visual y del design system, por lo que la nueva
+            solución también debía alinearse con el nuevo branding y sentar bases más sólidas para futuros desarrollos.
+          </p>
+        </div>
+      </section>
+
+      <!-- Investigación y discovery -->
+      <section class="cs-section" data-fade>
+        <div>
+          <h2 class="cs-h2">Investigación y discovery</h2>
+        </div>
+        <div class="cs-section__content">
+          <p>
+            La primera fase del proyecto estuvo centrada en entender tanto las necesidades de usuario como las
+            limitaciones internas de la plataforma.
+          </p>
+          <p>
+            Para ello:<br>
+            - realicé benchmarking de plataformas de travel y ecommerce,<br>
+            - analicé el comportamiento actual de los filtros y sus inconsistencias,<br>
+            - trabajé junto al equipo técnico para entender limitaciones y deuda técnica,<br>
+            - pregunté al equipo de data cuales eran los filtros más usados por país y plataforma, filtros que se
+            activan y desactivan en la misma sesión, y otros datos que podían ser relevantes,<br>
+            - colaboré con producto para identificar prioridades y puntos de fricción.<br>
+            - y utilicé herramientas de IA como Claude para analizar información proporcionada por el equipo de data y
+            sintetizar insights relevantes para el proyecto.
+          </p>
+          <p>
+            Además, estructuré documentación funcional y UX en Notion para facilitar la alineación entre diseño,
+            producto y tecnología durante el proceso de definición. Este proceso permitió detectar patrones duplicados,
+            diferencias de comportamiento entre productos y problemas de consistencia que afectaban a la experiencia
+            global.
+          </p>
+        </div>
+      </section>
+
+      <!-- Enfoque de diseño y resultados -->
+      <section class="cs-section" data-fade>
+        <div>
+          <h2 class="cs-h2">Enfoque de diseño y resultados</h2>
+        </div>
+        <div class="cs-section__content">
+          <p>
+            El rediseño se centró en construir un sistema de filtros más claro, consistente, escalable y alineado con la
+            evolución del producto y del design system. En una primera iteración, el foco estuvo puesto en mejorar la
+            experiencia mobile-first, redefiniendo los componentes según el nuevo branding y estableciendo patrones de
+            interacción consistentes entre los distintos productos de la plataforma. Además, se trabajó en mejorar la
+            jerarquía visual y la accesibilidad de la interfaz, crear componentes reutilizables que facilitasen el
+            mantenimiento y la escalabilidad de futuras soluciones.
+          </p>
+        </div>
+      </section>
+
+      <!-- Paso 1 -->
+      <section class="cs-section" data-fade>
+        <div class="cs-section__label">Paso 1</div>
+        <div class="cs-section__content">
+          <h2 class="cs-h3">Nueva estructura mobile-first</h2>
+          <p>
+            La primera decisión fue dar más visibilidad a los filtros en mobile sin reducir el espacio disponible para
+            los resultados. Para ello, se diseñó una barra de filtros sticky integrada en la parte superior, evitando el
+            uso de elementos flotantes que ocuparan parte de la pantalla. Además, al hacer scroll hacia arriba, aparece
+            la barra con los filtros de búsqueda principales.
+          </p>
+          <p>
+            Esta solución responde al comportamiento observado de los usuarios: los filtros de búsqueda suelen
+            configurarse al inicio y rara vez se modifican durante la navegación. Por ello, permanecen ocultos mientras
+            se exploran los resultados y reaparecen solo cuando pueden resultar útiles.
+          </p>
+          <p>
+            También se incorporaron pills con filtros recomendados y filtros seleccionados. A partir del análisis
+            realizado junto al equipo de Data, se priorizaron los filtros con mayor uso y mejor tasa de conversión,
+            adaptando las recomendaciones a cada país según los datos disponibles. </p>
+        </div>
+      </section>
+      <div class="cs-figure">
+        <div class="cs-figure__img">
+          <img src="assets/filtros/img-filtros-scroll.jpg" alt="Estructura de filtros en mobile" />
+        </div>
+        <figcaption></figcaption>
+      </div>
+
+      <!-- Paso 2 -->
+      <section class="cs-section" data-fade>
+        <div class="cs-section__label">Paso 2</div>
+        <div class="cs-section__content">
+          <h2 class="cs-h3">Unificación y rediseño de componentes</h2>
+          <p>
+            Se unificaron elementos con comportamientos similares en componentes únicos para aumentar la consistencia
+            entre productos y se rediseñaron siguiendo las directrices del nuevo branding.
+          </p>
+        </div>
+      </section>
+      <div class="cs-figure">
+        <div class="cs-figure__img">
+          <img src="assets/filtros/img-filtros-components.jpg" alt="Componentes dediseñados" />
+        </div>
+        <figcaption></figcaption>
+      </div>
+
+      <!-- Paso 3 -->
+      <section class="cs-section" data-fade>
+        <div class="cs-section__label">Paso 3</div>
+        <div class="cs-section__content">
+          <h2 class="cs-h3">Mejorar la jerarquía visual y accesibilidad</h2>
+          <p>
+            Uno de los objetivos del rediseño fue mejorar la jerarquía visual de los filtros para facilitar su
+            comprensión y uso, especialmente en dispositivos móviles. Se reorganizó la información priorizando los
+            elementos más relevantes para la toma de decisiones, reduciendo el ruido visual y creando una estructura más
+            clara entre categorías, opciones y acciones. Paralelamente, se revisaron aspectos de accesibilidad como el
+            contraste de colores, los tamaños de interacción, los estados de los componentes y la legibilidad de los
+            contenidos, con el objetivo de ofrecer una experiencia más inclusiva y alineada con los estándares AA. </p>
+        </div>
+      </section>
+      <!--
+      <div class="cs-figure">
+        <div class="cs-figure__img">
+          <img src="assets/filtros/img-filtros-components.jpg" alt="Componentes dediseñados" />
+        </div>
+        <figcaption></figcaption>
+      </div>
+      -->
+
+      <!-- Aprendizajes -->
+      <section class="cs-section" data-fade>
+        <div>
+         <h2 class="cs-h2">Aprendizajes</h2>
+        </div>
+        <div class="cs-section__content">
+          <div class="cs-learnings">
+            <div class="cs-learning">
+              <h4>Simplificar sin perder valor</h4>
+              <p>Traducir conceptos técnicos en propuestas claras requiere entender el producto tan bien como el
+                negocio.</p>
+            </div>
+            <div class="cs-learning">
+              <h4>La arquitectura primero</h4>
+              <p>Reorganizar el contenido para que la navegación sea fluida es tan importante como el diseño visual.</p>
+            </div>
+            <div class="cs-learning">
+              <h4>El design system como base</h4>
+              <p>Definir la guía de estilo antes de la interfaz ahorró mucho tiempo y garantizó coherencia.</p>
+            </div>
+            <div class="cs-learning">
+              <h4>Diseño alineado con negocio</h4>
+              <p>Cada decisión visual y funcional tiene que poder justificarse en términos de objetivos comerciales.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nav entre proyectos -->
+      <div class="cs-nav-projects" data-fade>
+        <a href="index.html" class="cs-nav-projects__prev">
+          <span class="cs-nav-projects__dir"><i class="ph ph-arrow-left" aria-hidden="true"></i> Todos los proyectos</span>
+          <span class="cs-nav-projects__name">Ver portfolio completo</span>
+        </a>
+        <a href="proyecto-app-legal.html" class="cs-nav-projects__next">
+          <span class="cs-nav-projects__dir">Siguiente <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+          <span class="cs-nav-projects__name">Rediseño de una app móvil</span>
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="icons.js"></script>
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
