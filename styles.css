@@ -426,7 +426,7 @@ button { cursor: pointer; background: none; border: none; font: inherit; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem 2rem;
-  padding-bottom: clamp(5rem, 10vw, 8rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .proj-item {
@@ -529,6 +529,91 @@ button { cursor: pointer; background: none; border: none; font: inherit; }
   white-space: nowrap;
   padding-top: .1rem;
   flex-shrink: 0;
+}
+
+/* ============================================
+   TOOLS CAROUSEL — Figma 182:6264
+   ============================================ */
+.tools-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 10rem;
+}
+
+.tools-carousel__title {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text-primary);
+  margin: 0;
+  max-width: 40rem;
+}
+
+.tools-carousel__viewport {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+
+.tools-carousel__viewport:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.tools-carousel__track {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: max-content;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  animation: tools-marquee 45s linear infinite;
+  will-change: transform;
+}
+
+.tools-carousel__item {
+  flex: 0 0 12.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tools-carousel__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.tools-carousel--static .tools-carousel__viewport {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+.tools-carousel--static .tools-carousel__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.tools-carousel--static .tools-carousel__track {
+  animation: none;
+  padding-inline: .25rem;
+}
+
+@keyframes tools-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* ============================================
@@ -966,8 +1051,13 @@ body.modal-open {
   .proj-item__link,
   .proj-item__img,
   .skip-link,
+  .tools-carousel__track,
   [data-fade] {
     transition: none !important;
+  }
+
+  .tools-carousel__track {
+    animation: none !important;
   }
 
   [data-fade] {

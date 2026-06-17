@@ -251,4 +251,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCursorBlob();
   initAccessibleVideos?.();
   initOtherProjects?.();
+  initToolsCarousel?.();
 });
