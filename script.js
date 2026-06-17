@@ -102,6 +102,7 @@ function initMenu() {
 function initFooterScroll() {
   document.querySelectorAll('a[href="#footer"]').forEach(link => {
     link.addEventListener('click', e => {
+      if (link.closest('.project-modal')) return;
       const footer = document.getElementById('footer');
       if (!footer) return;
       e.preventDefault();
@@ -153,7 +154,7 @@ function initLockedCaseModal() {
     closeBtn?.focus({ preventScroll: true });
   }
 
-  function closeModal() {
+  function closeModal({ restoreFocus = true, onClosed, immediate = false } = {}) {
     if (!modal.classList.contains('is-open') || isClosing) return;
     isClosing = true;
     focusTrap?.deactivate();
@@ -167,13 +168,21 @@ function initLockedCaseModal() {
       panel.removeEventListener('transitionend', onTransitionEnd);
       modal.hidden = true;
       modal.setAttribute('aria-hidden', 'true');
-      lastFocus?.focus();
+      if (restoreFocus && lastFocus) {
+        lastFocus.focus({ preventScroll: true });
+      }
+      onClosed?.();
     };
 
     const onTransitionEnd = (e) => {
       if (e.target !== panel || e.propertyName !== 'opacity') return;
       finishClose();
     };
+
+    if (immediate) {
+      finishClose();
+      return;
+    }
 
     panel.addEventListener('transitionend', onTransitionEnd);
     closeTimer = window.setTimeout(finishClose, 700);
@@ -191,8 +200,12 @@ function initLockedCaseModal() {
   });
   panel.addEventListener('click', e => e.stopPropagation());
 
-  modal.querySelector('a[href="#footer"]')?.addEventListener('click', () => {
-    closeModal();
+  modal.querySelector('a[href="#footer"]')?.addEventListener('click', e => {
+    e.preventDefault();
+    const footer = document.getElementById('footer');
+    closeModal({ restoreFocus: false, immediate: true });
+    footer?.scrollIntoView({ behavior: 'auto' });
+    document.getElementById('footer-cta-title')?.focus({ preventScroll: true });
   });
 
   document.addEventListener('keydown', e => {
