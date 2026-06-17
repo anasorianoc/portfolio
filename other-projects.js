@@ -3,6 +3,7 @@ const PROJECT_I18N = {
   'fotografia-producto': 'fotografia',
   'catalogo-redes': 'catalogo',
   'pintura-reformas': 'pintura',
+  'video-vfx': 'video',
 };
 
 function tr(key, fallback = '') {
@@ -235,6 +236,13 @@ const OTHER_PROJECTS = [
     ],
   },
   {
+    id: 'video-vfx',
+    title: 'Grabación, edición y vfx de vídeos',
+    titleHtml: 'Grabación, edición<br>y vfx de vídeos',
+    image: 'assets/otros/video-vfx/thumbnail.jpg',
+    youtubeId: '1Hag1-ISNJI',
+  },
+  {
     id: 'animacion-webgl',
     title: 'Animación WebGl',
     image: 'assets/otros/animacion-webgl.jpg',
@@ -290,11 +298,25 @@ function renderSections(sections) {
 
 function renderModalContent(project) {
   const titleHtml = project.titleHtml || project.title;
-  const coverSrc = project.cover || project.image;
+  const coverSrc = !project.youtubeId ? (project.cover || project.image) : null;
 
-  const coverContent = coverSrc
-    ? `<img src="${coverSrc}" alt="" loading="lazy" />`
-    : '';
+  let coverContent = '';
+  if (project.youtubeId) {
+    const videoTitle = tr('other.video.iframeTitle', project.title);
+    coverContent = `
+      <div class="project-modal__video">
+        <iframe
+          src="https://www.youtube.com/embed/${project.youtubeId}?rel=0"
+          title="${videoTitle}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    `;
+  } else if (coverSrc) {
+    coverContent = `<img src="${coverSrc}" alt="" loading="lazy" />`;
+  }
 
   let extra = '';
 
@@ -325,7 +347,7 @@ function renderModalContent(project) {
   return `
     <div class="project-modal__inner">
       <h2 class="project-modal__title" id="projectModalTitle">${titleHtml}</h2>
-      <div class="project-modal__cover${coverSrc ? '' : ' project-modal__cover--empty'}">
+      <div class="project-modal__cover${project.youtubeId ? ' project-modal__cover--video' : coverSrc ? '' : ' project-modal__cover--empty'}">
         ${coverContent}
       </div>
       ${extra}

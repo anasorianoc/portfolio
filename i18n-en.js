@@ -351,5 +351,8 @@ window.I18N_EN = {
   'other.pintura.sections.solution.imageAlt': 'Pigmenta website home',
   'other.pintura.sections.learning.heading': 'Key learnings',
   'other.pintura.sections.learning.p1': 'This project confirmed the importance of combining visual design, UX, and SEO from the start. It was also key to understand the end client (people looking for trust, pricing, and speed) and reflect that in the design.',
+  'other.video.title': 'Video recording, editing and VFX',
+  'other.video.titleHtml': 'Video recording, editing<br>and VFX',
+  'other.video.iframeTitle': 'Video recording, editing and VFX project',
   'other.viewProject': 'View project: {title}'
 };
