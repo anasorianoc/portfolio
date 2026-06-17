@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre mi — Ana Soriano</title>
+  <title data-i18n="page.about.title">Sobre mi — Ana Soriano</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400&family=Manrope:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet" />
@@ -13,11 +13,11 @@
 
   <div id="site-menu" data-active="about"></div>
 
-  <main class="about-main">
+  <main id="main" class="about-main">
 
     <section class="page-hero wrap">
-      <h1 class="page-hero__title" data-fade>¡Hola, soy Ana!</h1>
-      <p class="page-hero__sub" data-fade data-fade-delay="1">
+      <h1 class="page-hero__title" data-fade data-i18n="about.hero.title">¡Hola, soy Ana!</h1>
+      <p class="page-hero__sub" data-fade data-fade-delay="1" data-i18n="about.hero.sub">
         Llevo +5 años como diseñadora con foco en experiencia de usuario, estrategia y proyectos creativos
       </p>
     </section>
@@ -25,20 +25,20 @@
     <div class="about-grid wrap">
 
       <div class="about-text" data-fade>
-        <p>
+        <p data-i18n="about.bio.p1">
           Empecé estudiando Bellas Artes y Fotografía, lo que me llevó a trabajar en una agencia de diseño creando identidades visuales, experiencias digitales y proyectos multimedia. Con el tiempo, mi interés por  la tecnología me llevó a especializarme en diseño de producto digital, UX/UI y estrategia de experiencia de usuario.
         </p>
-        <p>
+        <p data-i18n="about.bio.p2">
           He trabajado en proyectos de diferentes sectores, colaborando con equipos multidisciplinares para transformar necesidades de negocio y de usuario en productos digitales intuitivos, accesibles y escalables. Disfruto especialmente enfrentándome a problemas complejos, donde encontrar el equilibrio entre la experiencia de usuario, los objetivos de negocio y el detalle visual supone un reto.
         </p>
-        <p>
+        <p data-i18n="about.bio.p3">
           Fuera del trabajo, disfruto de la cultura y la creatividad. Puedo pasarme horas dibujando, viendo cine, escribiendo o explorando nuevas ideas. Desde hace unos años también he descubierto el placer de desconectar en la naturaleza y salir de excursión con amigos.
         </p>
       </div>
 
       <figure class="about-image" data-fade data-fade-delay="1">
         <div class="about-image__photo">
-          <img src="assets/sobremi.jpg" alt="Retrato de Ana Soriano" width="660" height="880" />
+          <img src="assets/sobremi.jpg" alt="Retrato de Ana Soriano" width="660" height="880" data-i18n-alt="about.image.alt" />
         </div>
       </figure>
 
@@ -47,78 +47,78 @@
     <section class="about-cv wrap">
 
       <div class="about-cv__block" data-fade>
-        <p class="about-cv__label">Experiencia profesional</p>
+        <h2 class="about-cv__label" data-i18n="about.experience.title">Experiencia profesional</h2>
 
         <article class="cv-entry">
-          <p class="cv-entry__label">Weekendesk via Hi Experience</p>
-          <p class="cv-entry__role">Product Designer</p>
-          <p class="cv-entry__meta">Feb. 2023 — Hoy</p>
+          <h3 class="cv-entry__label" data-i18n="about.exp.weekendesk.company">Weekendesk via Hi Experience</h3>
+          <p class="cv-entry__role" data-i18n="about.exp.weekendesk.role">Product Designer</p>
+          <p class="cv-entry__meta" data-i18n="about.exp.weekendesk.period">Feb. 2023 — Hoy</p>
           <ul class="cv-entry__list">
-            <li>Rediseño de flujos de usuario, arquitectura de la información y UI de elementos web.</li>
-            <li>Benchmarking UX e investigación de la competencia.</li>
-            <li>Colaboración transversal con equipos de SEO, desarrollo y producto.</li>
-            <li>Participación en la definición e implementación del Design System.</li>
-            <li>Creación y unificación de componentes para mejorar consistencia, accesibilidad y escalabilidad.</li>
-            <li>Documentación funcional y UX en Notion apoyada por herramientas de IA.</li>
+            <li data-i18n="about.exp.weekendesk.b1">Rediseño de flujos de usuario, arquitectura de la información y UI de elementos web.</li>
+            <li data-i18n="about.exp.weekendesk.b2">Benchmarking UX e investigación de la competencia.</li>
+            <li data-i18n="about.exp.weekendesk.b3">Colaboración transversal con equipos de SEO, desarrollo y producto.</li>
+            <li data-i18n="about.exp.weekendesk.b4">Participación en la definición e implementación del Design System.</li>
+            <li data-i18n="about.exp.weekendesk.b5">Creación y unificación de componentes para mejorar consistencia, accesibilidad y escalabilidad.</li>
+            <li data-i18n="about.exp.weekendesk.b6">Documentación funcional y UX en Notion apoyada por herramientas de IA.</li>
           </ul>
         </article>
 
         <article class="cv-entry">
-          <p class="cv-entry__label">Edenred via Hi Experience</p>
-          <p class="cv-entry__role">Product Designer</p>
-          <p class="cv-entry__meta">Sept. 2021 — Feb. 2023</p>
+          <h3 class="cv-entry__label" data-i18n="about.exp.edenred.company">Edenred via Hi Experience</h3>
+          <p class="cv-entry__role" data-i18n="about.exp.edenred.role">Product Designer</p>
+          <p class="cv-entry__meta" data-i18n="about.exp.edenred.period">Sept. 2021 — Feb. 2023</p>
           <ul class="cv-entry__list">
-            <li>Diseño de nuevas funcionalidades y flujos para plataformas con distintos tipos de usuario.</li>
-            <li>Mantenimiento y mejora del design system (componentes, estados, documentación).</li>
-            <li>Colaboración estrecha con equipos de desarrollo y producto.</li>
-            <li>Mejora de procesos de diseño y handoff con desarrollo, aumentando la eficiencia del equipo.</li>
-            <li>Realización de tests con usuarios y validación de prototipos.</li>
-            <li>Participación en discovery, workshops de ideación y definición de nuevos modelos de negocio.</li>
+            <li data-i18n="about.exp.edenred.b1">Diseño de nuevas funcionalidades y flujos para plataformas con distintos tipos de usuario.</li>
+            <li data-i18n="about.exp.edenred.b2">Mantenimiento y mejora del design system (componentes, estados, documentación).</li>
+            <li data-i18n="about.exp.edenred.b3">Colaboración estrecha con equipos de desarrollo y producto.</li>
+            <li data-i18n="about.exp.edenred.b4">Mejora de procesos de diseño y handoff con desarrollo, aumentando la eficiencia del equipo.</li>
+            <li data-i18n="about.exp.edenred.b5">Realización de tests con usuarios y validación de prototipos.</li>
+            <li data-i18n="about.exp.edenred.b6">Participación en discovery, workshops de ideación y definición de nuevos modelos de negocio.</li>
           </ul>
         </article>
 
         <article class="cv-entry">
-          <p class="cv-entry__label">Agencia Ninja / Setroi / freelance</p>
-          <p class="cv-entry__role">Diseñadora UX/UI y gráfica</p>
-          <p class="cv-entry__meta">Feb. 2020 — Julio 2021</p>
+          <h3 class="cv-entry__label" data-i18n="about.exp.agency.company">Agencia Ninja / Setroi / freelance</h3>
+          <p class="cv-entry__role" data-i18n="about.exp.agency.role">Diseñadora UX/UI y gráfica</p>
+          <p class="cv-entry__meta" data-i18n="about.exp.agency.period">Feb. 2020 — Julio 2021</p>
           <ul class="cv-entry__list">
-            <li>Diseño de interfaces web y aplicaciones para múltiples clientes.</li>
-            <li>Maquetación web en Wordpress.</li>
-            <li>Branding y diseño gráfico, creación de identidades visuales y diseño de material corporativo.</li>
-            <li>Producción de material audiovisual como videos corporativos con motion graphics y fotografía para web y redes sociales.</li>
+            <li data-i18n="about.exp.agency.b1">Diseño de interfaces web y aplicaciones para múltiples clientes.</li>
+            <li data-i18n="about.exp.agency.b2">Maquetación web en Wordpress.</li>
+            <li data-i18n="about.exp.agency.b3">Branding y diseño gráfico, creación de identidades visuales y diseño de material corporativo.</li>
+            <li data-i18n="about.exp.agency.b4">Producción de material audiovisual como videos corporativos con motion graphics y fotografía para web y redes sociales.</li>
           </ul>
         </article>
 
         <div class="about-skills">
           <div class="about-skills__col">
-            <p class="about-cv__label">Habilidades</p>
+            <h2 class="about-cv__label" data-i18n="about.skills.title">Habilidades</h2>
             <ul class="about-skills__list">
-              <li>User Research</li>
-              <li>Wireframing &amp; Prototipado</li>
-              <li>Usability Testing</li>
-              <li>Design Systems</li>
-              <li>Interaction Design</li>
-              <li>Accesibilidad (WCAG 2.1)</li>
-              <li>Data-Driven design</li>
-              <li>IA aplicada a procesos de diseño</li>
+              <li data-i18n="about.skills.s1">User Research</li>
+              <li data-i18n="about.skills.s2">Wireframing &amp; Prototipado</li>
+              <li data-i18n="about.skills.s3">Usability Testing</li>
+              <li data-i18n="about.skills.s4">Design Systems</li>
+              <li data-i18n="about.skills.s5">Interaction Design</li>
+              <li data-i18n="about.skills.s6">Accesibilidad (WCAG 2.1)</li>
+              <li data-i18n="about.skills.s7">Data-Driven design</li>
+              <li data-i18n="about.skills.s8">IA aplicada a procesos de diseño</li>
             </ul>
           </div>
 
           <div class="about-skills__col">
-            <p class="about-cv__label">Herramientas</p>
+            <h2 class="about-cv__label" data-i18n="about.tools.title">Herramientas</h2>
             <ul class="about-skills__list">
-              <li>Figma · FigJam</li>
-              <li>Maze · Useberry</li>
-              <li>Notion · Jira · Linear</li>
-              <li>HTML · CSS</li>
+              <li data-i18n="about.tools.t1">Figma · FigJam</li>
+              <li data-i18n="about.tools.t2">Claude · Cursor</li>
+              <li data-i18n="about.tools.t3">Notion · Github · Adobe</li>
+              <li data-i18n="about.tools.t4">HTML · CSS</li>
             </ul>
           </div>
 
           <div class="about-skills__col">
-            <p class="about-cv__label">Idiomas</p>
+            <h2 class="about-cv__label" data-i18n="about.languages.title">Idiomas</h2>
             <ul class="about-skills__list">
-              <li>Inglés (B2)</li>
-              <li>Español y catalán (Nativo)</li>
+              <li data-i18n="about.languages.l1">Inglés (B2)</li>
+              <li data-i18n="about.languages.l2">Español y catalán (Nativo)</li>
             </ul>
           </div>
         </div>
@@ -126,42 +126,42 @@
       </div>
 
       <div class="about-cv__block" data-fade data-fade-delay="1">
-        <p class="about-cv__label">Educación</p>
+        <h2 class="about-cv__label" data-i18n="about.education.title">Educación</h2>
 
         <article class="cv-entry">
-          <p class="cv-entry__label">Anthropic Academy</p>
-          <p class="cv-entry__role">Claude 101 &amp; Introduction to agent skills</p>
-          <p class="cv-entry__meta">2024</p>
+          <h3 class="cv-entry__label" data-i18n="about.edu.anthropic.school">Anthropic Academy</h3>
+          <p class="cv-entry__role" data-i18n="about.edu.anthropic.course">Claude 101 &amp; Introduction to agent skills</p>
+          <p class="cv-entry__meta" data-i18n="about.edu.anthropic.period">2024</p>
         </article>
 
         <article class="cv-entry">
-          <p class="cv-entry__label">Shift + R</p>
-          <p class="cv-entry__role">Creación de Design Systems con Figma, automatizaciones e IA</p>
-          <p class="cv-entry__meta">2023 — 2024</p>
+          <h3 class="cv-entry__label" data-i18n="about.edu.shiftr.school">Shift + R</h3>
+          <p class="cv-entry__role" data-i18n="about.edu.shiftr.course">Creación de Design Systems con Figma, automatizaciones e IA</p>
+          <p class="cv-entry__meta" data-i18n="about.edu.shiftr.period">2023 — 2024</p>
         </article>
 
         <article class="cv-entry">
-          <p class="cv-entry__label">IT Academy</p>
-          <p class="cv-entry__role">Fundamentos de la programación (Javascript)</p>
-          <p class="cv-entry__meta">2023</p>
+          <h3 class="cv-entry__label" data-i18n="about.edu.itacademy.school">IT Academy</h3>
+          <p class="cv-entry__role" data-i18n="about.edu.itacademy.course">Fundamentos de la programación (Javascript)</p>
+          <p class="cv-entry__meta" data-i18n="about.edu.itacademy.period">2023</p>
         </article>
 
         <article class="cv-entry">
-          <p class="cv-entry__label">Índice Consultoría y formación</p>
-          <p class="cv-entry__role">Gestión ágil de proyectos con scrum</p>
-          <p class="cv-entry__meta">2024</p>
+          <h3 class="cv-entry__label" data-i18n="about.edu.indice.school">Índice Consultoría y formación</h3>
+          <p class="cv-entry__role" data-i18n="about.edu.indice.course">Gestión ágil de proyectos con scrum</p>
+          <p class="cv-entry__meta" data-i18n="about.edu.indice.period">2024</p>
         </article>
 
         <article class="cv-entry">
-          <p class="cv-entry__label">Shifta Elisava</p>
-          <p class="cv-entry__role">Máster en Experiencia de usuario para la transformación digital</p>
-          <p class="cv-entry__meta">2022 — 2023</p>
+          <h3 class="cv-entry__label" data-i18n="about.edu.elisava.school">Shifta Elisava</h3>
+          <p class="cv-entry__role" data-i18n="about.edu.elisava.course">Máster en Experiencia de usuario para la transformación digital</p>
+          <p class="cv-entry__meta" data-i18n="about.edu.elisava.period">2022 — 2023</p>
         </article>
 
         <article class="cv-entry">
-          <p class="cv-entry__label">Universitat de Barcelona</p>
-          <p class="cv-entry__role">Grado en Bellas Artes</p>
-          <p class="cv-entry__meta">2015 — 2019</p>
+          <h3 class="cv-entry__label" data-i18n="about.edu.ub.school">Universitat de Barcelona</h3>
+          <p class="cv-entry__role" data-i18n="about.edu.ub.course">Grado en Bellas Artes</p>
+          <p class="cv-entry__meta" data-i18n="about.edu.ub.period">2015 — 2019</p>
         </article>
       </div>
 
@@ -172,6 +172,9 @@
   <div id="site-footer"></div>
 
   <script src="icons.js"></script>
+  <script src="i18n-en.js"></script>
+  <script src="i18n.js"></script>
+  <script src="a11y.js"></script>
   <script src="components.js"></script>
   <script src="script.js"></script>
 </body>

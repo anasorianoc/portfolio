@@ -41,15 +41,34 @@ function initMenu() {
   const burger = document.getElementById('burger');
   const navLinks = document.getElementById('navLinks');
   const MOBILE_NAV_MQ = window.matchMedia('(max-width: 768px)');
+  const drawerTrap = drawer ? window.createFocusTrap?.(drawer) : null;
+
+  function menuLabel(key, fallback) {
+    const lang = window.I18n?.getLang?.() || 'es';
+    if (lang === 'en') {
+      const translated = window.I18n?.t(key);
+      if (translated) return translated;
+    }
+    return fallback;
+  }
 
   function setMenuOpen(open) {
     if (!drawer || !burger || !navLinks) return;
     drawer.classList.toggle('is-open', open);
     drawer.setAttribute('aria-hidden', String(!open));
     burger.setAttribute('aria-expanded', String(open));
-    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    burger.setAttribute('aria-label', open
+      ? menuLabel('menu.close', 'Cerrar menú')
+      : menuLabel('menu.open', 'Abrir menú'));
     document.body.classList.toggle('menu-nav-open', open);
-    if (open) nav?.classList.remove('menu--hidden');
+    if (open) {
+      nav?.classList.remove('menu--hidden');
+      drawerTrap?.activate();
+      drawer.querySelector('a, button')?.focus({ preventScroll: true });
+    } else {
+      drawerTrap?.deactivate();
+      burger?.focus({ preventScroll: true });
+    }
   }
 
   burger?.addEventListener('click', () => {
@@ -68,6 +87,14 @@ function initMenu() {
 
   MOBILE_NAV_MQ.addEventListener('change', e => {
     if (!e.matches) setMenuOpen(false);
+  });
+
+  window.addEventListener('languagechange', () => {
+    if (!burger) return;
+    const open = drawer?.classList.contains('is-open');
+    burger.setAttribute('aria-label', open
+      ? menuLabel('menu.close', 'Cerrar menú')
+      : menuLabel('menu.open', 'Abrir menú'));
   });
 }
 
@@ -107,11 +134,14 @@ function initLockedCaseModal() {
   const stage = modal?.querySelector('.project-modal__stage');
   if (!trigger || !modal || !panel) return;
 
+  let lastFocus = null;
   let isClosing = false;
   let closeTimer = null;
+  const focusTrap = window.createFocusTrap?.(panel);
 
   function openModal() {
     if (isClosing) return;
+    lastFocus = document.activeElement;
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
@@ -119,12 +149,14 @@ function initLockedCaseModal() {
     requestAnimationFrame(() => {
       requestAnimationFrame(() => modal.classList.add('is-open'));
     });
+    focusTrap?.activate();
     closeBtn?.focus({ preventScroll: true });
   }
 
   function closeModal() {
     if (!modal.classList.contains('is-open') || isClosing) return;
     isClosing = true;
+    focusTrap?.deactivate();
     modal.classList.remove('is-open');
     document.body.classList.remove('modal-open');
 
@@ -135,6 +167,7 @@ function initLockedCaseModal() {
       panel.removeEventListener('transitionend', onTransitionEnd);
       modal.hidden = true;
       modal.setAttribute('aria-hidden', 'true');
+      lastFocus?.focus();
     };
 
     const onTransitionEnd = (e) => {
@@ -170,9 +203,11 @@ function initLockedCaseModal() {
 // ─── Cursor blob ──────────────────────────────────────────────
 function initCursorBlob() {
   const blob = document.getElementById('cursorBlob');
-  const cards = document.querySelectorAll('.proj-item__img-wrap:not(.proj-item__img-wrap--locked)');
+  const cards = document.querySelectorAll('.proj-item__link:not(.proj-item__link--locked)');
 
   if (!blob || !cards.length) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
 
   let blobX = 0, blobY = 0;
   let mouseX = 0, mouseY = 0;
@@ -214,5 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initFadeObserver();
   initLockedCaseModal();
   initCursorBlob();
+  initAccessibleVideos?.();
   initOtherProjects?.();
 });

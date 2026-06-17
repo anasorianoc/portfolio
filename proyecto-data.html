@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dat·A — Branding y diseño web · Ana Soriano</title>
+  <title data-i18n="data.page.title">Dat·A — Branding y diseño web · Ana Soriano</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400&family=Manrope:wght@400;500;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
@@ -14,16 +14,16 @@
 
   <div id="site-menu" data-active="work"></div>
 
-  <main>
+  <main id="main">
 
     <!-- ── HERO ── -->
     <div class="cs-hero">
       <div class="cs-hero__wrap">
         <a href="index.html" class="cs-back cs-back--label icon-inline" data-fade>
-          <i class="ph ph-arrow-left" aria-hidden="true"></i> Volver
+          <i class="ph ph-arrow-left" aria-hidden="true"></i> <span data-i18n="data.back">Volver</span>
         </a>
-        <p class="cs-hero__category cs-hero__category--label" data-fade>Branding · Diseño web · UX/UI</p>
-        <h1 class="cs-hero__title cs-hero__title--wide" data-fade>
+        <p class="cs-hero__category cs-hero__category--label" data-fade data-i18n="data.hero.category">Branding · Diseño web · UX/UI</p>
+        <h1 class="cs-hero__title cs-hero__title--wide" data-fade data-i18n="data.hero.title">
           Branding y diseño web para una plataforma de datos
         </h1>
       </div>
@@ -32,6 +32,7 @@
         <img
           src="assets/data/hero-checkout.jpg"
           alt="Checkout de Dat·A"
+          data-i18n-alt="data.hero.alt"
         />
       </div>
     </div>
@@ -41,8 +42,8 @@
       <section class="cs-section cs-section--intro" data-fade>
         <div class="cs-section__meta">
           <div class="cs-meta-group">
-            <span class="cs-meta-group__label">Disciplinas</span>
-            <div class="cs-meta-group__content">
+            <span class="cs-meta-group__label" data-i18n="data.meta.disciplines.label">Disciplinas</span>
+            <div class="cs-meta-group__content" data-i18n="data.meta.disciplines.value" data-i18n-html>
               Branding<br>
               Diseño UX / UI<br>
               Design System<br>
@@ -50,19 +51,19 @@
             </div>
           </div>
           <div class="cs-meta-group">
-            <span class="cs-meta-group__label">Industria</span>
-            <div class="cs-meta-group__content">Servicio de datos</div>
+            <span class="cs-meta-group__label" data-i18n="data.meta.industry.label">Industria</span>
+            <div class="cs-meta-group__content" data-i18n="data.meta.industry.value">Servicio de datos</div>
           </div>
           <div class="cs-meta-group">
-            <span class="cs-meta-group__label">Año</span>
-            <div class="cs-meta-group__content">2024</div>
+            <span class="cs-meta-group__label" data-i18n="data.meta.year.label">Año</span>
+            <div class="cs-meta-group__content" data-i18n="data.meta.year.value">2024</div>
           </div>
         </div>
         <div class="cs-section__content cs-section__content--lead">
-          <p>
+          <p data-i18n="data.intro.p1">
             Diseñé una web y proceso de compra para una empresa de venta de datos, enfocándome en simplificar el acceso a productos complejos.
           </p>
-          <p>
+          <p data-i18n="data.intro.p2">
             Creé una experiencia intuitiva y fluida, con una arquitectura clara y una interfaz visual profesional alineada con los objetivos del negocio.
           </p>
         </div>
@@ -71,8 +72,8 @@
 
     <!-- ── DESIGN SYSTEM ── -->
     <section class="cs-split" data-fade>
-      <h2 class="cs-split__title">Design System</h2>
-      <p class="cs-split__text">
+      <h2 class="cs-split__title" data-i18n="data.designSystem.title">Design System</h2>
+      <p class="cs-split__text" data-i18n="data.designSystem.text">
         Para asegurar coherencia visual y eficiencia en el diseño, desarrollé una guía de estilo y un design system básico. Este sistema define los principios clave de tipografía, color, componentes y espaciado, facilitando la escalabilidad y el trabajo colaborativo.
       </p>
     </section>
@@ -82,6 +83,7 @@
       <img
         src="assets/data/guia-de-estilo-data.png"
         alt="Guía de estilo de Dat·A — tipografía, color, componentes y espaciado"
+        data-i18n-alt="data.styleGuide.alt"
         loading="lazy"
       />
     </figure>
@@ -89,32 +91,32 @@
     <!-- ── DISEÑO FINAL ── -->
     <section class="cs-band cs-band--data">
       <div class="cs-split cs-split--inverse" data-fade>
-        <h2 class="cs-split__title">Diseño final</h2>
-        <p class="cs-split__text">
+        <h2 class="cs-split__title" data-i18n="data.final.title">Diseño final</h2>
+        <p class="cs-split__text" data-i18n="data.final.text">
           La primera fase del proyecto estuvo centrada en entender tanto las necesidades de usuario como las limitaciones internas de la plataforma.
         </p>
       </div>
       <div class="cs-band__screens" data-fade>
-        <img src="assets/data/data-Home.jpg" alt="Home de Dat·A" loading="lazy" />
-        <img src="assets/data/data-Checkout.jpg" alt="Checkout de Dat·A" loading="lazy" />
+        <img src="assets/data/data-Home.jpg" alt="Home de Dat·A" data-i18n-alt="data.final.homeAlt" loading="lazy" />
+        <img src="assets/data/data-Checkout.jpg" alt="Checkout de Dat·A" data-i18n-alt="data.final.checkoutAlt" loading="lazy" />
       </div>
     </section>
 
     <!-- ── APRENDIZAJES ── -->
     <div class="cs-body">
       <section class="cs-split" data-fade>
-        <h2 class="cs-split__title">Aprendizajes</h2>
+        <h2 class="cs-split__title" data-i18n="data.learnings.title">Aprendizajes</h2>
         <div class="cs-split__text">
-          <p>
+          <p data-i18n="data.learnings.p1">
             Este proyecto presentaba el reto de hacer accesible una oferta técnica y compleja para todo tipo de usuario. Estas son algunas de las conclusiones y aprendizajes que surgieron durante el proceso de diseño:
           </p>
-          <p>
+          <p data-i18n="data.learnings.p2">
             Simplificar sin perder valor. Traducir conceptos técnicos en una propuesta clara fue clave para que los usuarios entendieran qué estaban comprando y cómo usarlo.
           </p>
           <ul class="cs-list">
-            <li>Arquitectura de información clara. Reorganizar el contenido ayudó a que la navegación fuera fluida y que los usuarios encontraran lo que buscaban sin fricciones.</li>
-            <li>Design system como base de consistencia. Crear una guía visual desde el inicio permitió mantener coherencia en todo el proyecto y facilitó futuras iteraciones.</li>
-            <li>Diseño alineado al negocio. Cada decisión visual y funcional buscó no solo mejorar la experiencia, sino también apoyar los objetivos comerciales de la empresa.</li>
+            <li data-i18n="data.learnings.l1">Arquitectura de información clara. Reorganizar el contenido ayudó a que la navegación fuera fluida y que los usuarios encontraran lo que buscaban sin fricciones.</li>
+            <li data-i18n="data.learnings.l2">Design system como base de consistencia. Crear una guía visual desde el inicio permitió mantener coherencia en todo el proyecto y facilitó futuras iteraciones.</li>
+            <li data-i18n="data.learnings.l3">Diseño alineado al negocio. Cada decisión visual y funcional buscó no solo mejorar la experiencia, sino también apoyar los objetivos comerciales de la empresa.</li>
           </ul>
         </div>
       </section>
@@ -122,12 +124,12 @@
       <!-- ── MÁS PROYECTOS ── -->
       <div class="cs-nav-projects cs-nav-projects--case" data-fade>
         <a href="proyecto-filtros.html" class="cs-nav-projects__prev">
-          <span class="cs-nav-projects__dir"><i class="ph ph-arrow-left" aria-hidden="true"></i> Proyecto anterior</span>
-          <span class="cs-nav-projects__name">Rediseño de la experiencia de filtrado</span>
+          <span class="cs-nav-projects__dir"><i class="ph ph-arrow-left" aria-hidden="true"></i> <span data-i18n="data.nav.previous">Proyecto anterior</span></span>
+          <span class="cs-nav-projects__name" data-i18n="data.nav.previousProject">Rediseño de la experiencia de filtrado</span>
         </a>
         <a href="proyecto-app-legal.html" class="cs-nav-projects__next">
-          <span class="cs-nav-projects__dir">Proyecto siguiente <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
-          <span class="cs-nav-projects__name">Rediseño de una aplicación móvil para un despacho de abogados</span>
+          <span class="cs-nav-projects__dir"><span data-i18n="data.nav.next">Proyecto siguiente</span> <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+          <span class="cs-nav-projects__name" data-i18n="data.nav.nextProject">Rediseño de una aplicación móvil para un despacho de abogados</span>
         </a>
       </div>
     </div>
@@ -137,6 +139,9 @@
   <div id="site-footer"></div>
 
   <script src="icons.js"></script>
+  <script src="i18n-en.js"></script>
+  <script src="i18n.js"></script>
+  <script src="a11y.js"></script>
   <script src="components.js"></script>
   <script src="script.js"></script>
 </body>

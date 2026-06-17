@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Ana Soriano</title>
+  <title data-i18n="page.contact.title">Contact — Ana Soriano</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400&family=Manrope:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet" />
@@ -13,13 +13,12 @@
 
   <div id="site-menu" data-active=""></div>
 
-  <main class="wrap">
+  <main id="main" class="wrap">
 
     <section class="page-hero">
-      <h1 class="page-hero__title" data-fade>¿Trabajamos juntos?</h1>
-      <p class="page-hero__sub" data-fade data-fade-delay="1">
-        Estoy disponible para proyectos freelance y posiciones full-time.
-        Escríbeme y hablamos.
+      <h1 class="page-hero__title" data-fade data-i18n="contact.hero.title">¿Trabajamos juntos?</h1>
+      <p class="page-hero__sub" data-fade data-fade-delay="1" data-i18n="contact.hero.sub" data-i18n-html>
+        Estoy disponible para proyectos freelance y posiciones full-time.<br>Escríbeme y hablamos.
       </p>
     </section>
 
@@ -28,34 +27,34 @@
     <div class="contact-layout" style="padding-top:3rem">
 
       <div data-fade>
-        <p class="section-head__title">Contacto directo</p>
+        <p class="section-head__title" data-i18n="contact.direct.title">Contacto directo</p>
         <div class="contact-links">
           <div class="contact-link-item">
-            <span class="contact-link-item__label">Email</span>
+            <span class="contact-link-item__label" data-i18n="contact.label.email">Email</span>
             <a href="mailto:asorianocabello@gmail.com">asorianocabello@gmail.com</a>
           </div>
           <div class="contact-link-item">
-            <span class="contact-link-item__label">LinkedIn</span>
+            <span class="contact-link-item__label" data-i18n="contact.label.linkedin">LinkedIn</span>
             <a href="https://linkedin.com/in/asorianocabello" target="_blank" rel="noopener">linkedin.com/in/asorianocabello</a>
           </div>
           <div class="contact-link-item">
-            <span class="contact-link-item__label">Dribbble</span>
+            <span class="contact-link-item__label" data-i18n="contact.label.dribbble">Dribbble</span>
             <a href="https://dribbble.com/" target="_blank" rel="noopener">dribbble.com/ana</a>
           </div>
           <div class="contact-link-item">
-            <span class="contact-link-item__label">Behance</span>
+            <span class="contact-link-item__label" data-i18n="contact.label.behance">Behance</span>
             <a href="https://behance.net/" target="_blank" rel="noopener">behance.net/ana</a>
           </div>
         </div>
       </div>
 
       <div data-fade data-fade-delay="1">
-        <p class="section-head__title">Sobre disponibilidad</p>
-        <p class="contact-note">
+        <p class="section-head__title" data-i18n="contact.availability.title">Sobre disponibilidad</p>
+        <p class="contact-note" data-i18n="contact.availability.p1">
           Actualmente estoy abierta a nuevas oportunidades — tanto proyectos
           puntuales de diseño como posiciones en equipos de producto.
         </p>
-        <p class="contact-note" style="margin-top:1rem">
+        <p class="contact-note" style="margin-top:1rem" data-i18n="contact.availability.p2">
           Me interesan especialmente proyectos con impacto real en las personas,
           equipos que valoran la investigación y entornos donde el diseño tiene
           voz en las decisiones de producto.
@@ -69,6 +68,9 @@
   <div id="site-footer"></div>
 
   <script src="icons.js"></script>
+  <script src="i18n-en.js"></script>
+  <script src="i18n.js"></script>
+  <script src="a11y.js"></script>
   <script src="components.js"></script>
   <script src="script.js"></script>
 </body>

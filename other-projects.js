@@ -1,3 +1,68 @@
+const PROJECT_I18N = {
+  'ilustracion-1': 'ilustracion',
+  'fotografia-producto': 'fotografia',
+  'catalogo-redes': 'catalogo',
+  'pintura-reformas': 'pintura',
+};
+
+function tr(key, fallback = '') {
+  const lang = window.I18n?.getLang?.() || 'es';
+  if (lang === 'en') {
+    const value = window.I18n?.t(key);
+    if (value != null) return value;
+  }
+  return fallback;
+}
+
+function localizedProject(project) {
+  const slug = PROJECT_I18N[project.id];
+  if (!slug) return project;
+
+  const prefix = `other.${slug}`;
+  const copy = {
+    ...project,
+    title: tr(`${prefix}.title`, project.title),
+    titleHtml: tr(`${prefix}.titleHtml`, project.titleHtml || project.title),
+    intro: project.intro ? tr(`${prefix}.intro`, project.intro) : project.intro,
+  };
+
+  if (project.meta?.length) {
+    copy.meta = project.meta.map((item, index) => {
+      const labelKey = `${prefix}.meta.${index === 0 ? 'tasksLabel' : 'contextLabel'}`;
+      const valueKey = `${prefix}.meta.${index === 0 ? 'tasksValue' : 'contextValue'}`;
+      return {
+        label: tr(labelKey, item.label),
+        value: tr(valueKey, item.value).replace(/\\n/g, '\n'),
+      };
+    });
+  }
+
+  if (project.sections?.length) {
+    const sectionKeys = ['context', 'role', 'solution', 'learning'];
+    copy.sections = project.sections.map((section, index) => {
+      const sectionKey = sectionKeys[index];
+      if (!sectionKey) return section;
+      const sp = `${prefix}.sections.${sectionKey}`;
+      return {
+        ...section,
+        heading: tr(`${sp}.heading`, section.heading),
+        paragraphs: (section.paragraphs || []).map((text, pi) => tr(`${sp}.p${pi + 1}`, text)),
+        list: (section.list || []).map((item, li) => tr(`${sp}.l${li + 1}`, item)),
+        image: section.image
+          ? { ...section.image, alt: tr(`${sp}.imageAlt`, section.image.alt || '') }
+          : section.image,
+      };
+    });
+  }
+
+  return copy;
+}
+
+function getLocalizedProject(projectId) {
+  const project = getVisibleProjects().find(p => p.id === projectId);
+  return project ? localizedProject(project) : null;
+}
+
 const OTHER_PROJECTS = [
   {
     id: 'ilustracion-1',
@@ -273,22 +338,26 @@ function renderOtherProjectCards() {
   if (!track) return;
 
   track.innerHTML = getVisibleProjects().map(project => {
+    const localized = localizedProject(project);
     const media = project.image
       ? `<img src="${project.image}" alt="" loading="lazy" />`
       : '';
+    const viewLabel = tr('other.viewProject', 'Ver proyecto: {title}').replace('{title}', localized.title);
 
     return `
-      <button
-        type="button"
-        class="other-card"
-        data-project-id="${project.id}"
-        aria-label="Ver proyecto: ${project.title}"
-      >
-        <div class="other-card__media${project.image ? '' : ' other-card__media--empty'}">
-          ${media}
-        </div>
-        <h3 class="other-card__title">${project.title}</h3>
-      </button>
+      <li class="other-projects__item">
+        <button
+          type="button"
+          class="other-card"
+          data-project-id="${project.id}"
+          aria-label="${viewLabel}"
+        >
+          <div class="other-card__media${project.image ? '' : ' other-card__media--empty'}">
+            ${media}
+          </div>
+          <h3 class="other-card__title">${localized.title}</h3>
+        </button>
+      </li>
     `;
   }).join('');
 }
@@ -323,12 +392,14 @@ function initProjectModal() {
   let lastFocus = null;
   let isClosing = false;
   let closeTimer = null;
+  const focusTrap = window.createFocusTrap?.(panel);
 
   function openModal(projectId) {
-    const project = getVisibleProjects().find(p => p.id === projectId);
+    const project = getLocalizedProject(projectId);
     if (!project || isClosing) return;
 
     content.innerHTML = renderModalContent(project);
+    lastFocus = document.activeElement;
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
@@ -340,7 +411,7 @@ function initProjectModal() {
       });
     });
 
-    lastFocus = document.activeElement;
+    focusTrap?.activate();
     closeBtn?.focus({ preventScroll: true });
   }
 
@@ -348,6 +419,7 @@ function initProjectModal() {
     if (!modal.classList.contains('is-open') || isClosing) return;
 
     isClosing = true;
+    focusTrap?.deactivate();
     modal.classList.remove('is-open');
     document.body.classList.remove('modal-open');
 

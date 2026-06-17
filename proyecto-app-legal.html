@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rediseño app móvil · Ana Soriano</title>
+  <title data-i18n="legal.page.title">Rediseño app móvil · Ana Soriano</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400&family=Manrope:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet" />
@@ -14,16 +14,16 @@
 
   <div id="site-menu" data-active="work"></div>
 
-  <main>
+  <main id="main">
 
     <!-- ── HERO ── -->
     <div class="cs-hero">
       <div class="cs-hero__wrap">
         <a href="index.html" class="cs-back cs-back--label icon-inline" data-fade>
-          <i class="ph ph-arrow-left" aria-hidden="true"></i> Volver
+          <i class="ph ph-arrow-left" aria-hidden="true"></i> <span data-i18n="legal.back">Volver</span>
         </a>
-        <p class="cs-hero__category" data-fade>Sector legal · Mobile · UX/UI</p>
-        <h1 class="cs-hero__title" data-fade>
+        <p class="cs-hero__category" data-fade data-i18n="legal.hero.category">Sector legal · Mobile · UX/UI</p>
+        <h1 class="cs-hero__title" data-fade data-i18n="legal.hero.title">
           Rediseño de una aplicación móvil para un despacho de abogados
         </h1>
       </div>
@@ -32,23 +32,21 @@
         <img
           src="assets/abogados/abogados-portada.jpg"
           alt="Rediseño de la aplicación móvil legal"
+          data-i18n-alt="legal.hero.alt"
         />
       </div>
     </div>
 
-
-   
-
     <!-- ── BODY ── -->
     <div class="cs-body">
-      
- <!-- Contexto -->
+
+      <!-- Contexto -->
       <section class="cs-section cs-section--intro" data-fade>
         <div class="cs-section__meta">
 
           <div class="cs-meta-group">
-            <span class="cs-meta-group__label">Disciplinas</span>
-            <div class="cs-meta-group__content">
+            <span class="cs-meta-group__label" data-i18n="legal.meta.disciplines.label">Disciplinas</span>
+            <div class="cs-meta-group__content" data-i18n="legal.meta.disciplines.value" data-i18n-html>
               Investigación UX<br>
               Arquitectura de la información<br>
               Diseño UX/UI<br>
@@ -58,24 +56,24 @@
           </div>
 
           <div class="cs-meta-group">
-            <span class="cs-meta-group__label">Industria</span>
-            <div class="cs-meta-group__content">
+            <span class="cs-meta-group__label" data-i18n="legal.meta.industry.label">Industria</span>
+            <div class="cs-meta-group__content" data-i18n="legal.meta.industry.value">
               Despacho de abogados
             </div>
           </div>
 
           <div class="cs-meta-group">
-            <span class="cs-meta-group__label">Año</span>
-            <div class="cs-meta-group__content">
+            <span class="cs-meta-group__label" data-i18n="legal.meta.year.label">Año</span>
+            <div class="cs-meta-group__content" data-i18n="legal.meta.year.value">
               2026
             </div>
           </div>
         </div>
         <div class="cs-section__content">
-          <p>
+          <p data-i18n="legal.intro.p1">
             Una empresa del sector legal se encontraba en la necesidad de rediseñar su aplicación móvil para mejorar la experiencia de usuario y la eficiencia de sus servicios
           </p>
-          <p>
+          <p data-i18n="legal.intro.p2">
             Querían unos resultados rápidos sin invertir demasiado en investigación, por lo que decidí realizar una auditoria de experiencia de usuario para el rediseño y actualización de los visuales.
           </p>
         </div>
@@ -83,19 +81,19 @@
 
       <!-- Investigación -->
       <section class="cs-section" data-fade>
-        <div class="cs-section__label">Investigación</div>
+        <div class="cs-section__label" data-i18n="legal.research.label">Investigación</div>
         <div class="cs-section__content">
-          <h2 class="cs-h2">¿Cuál es el problema?</h2>
-          <p>
+          <h2 class="cs-h2" data-i18n="legal.research.title">¿Cuál es el problema?</h2>
+          <p data-i18n="legal.research.p1">
             El proyecto no tenía tiempo suficiente ni recursos para hacer una amplia investigación,
             pero para evitar diseñar a ciegas utilicé algunos métodos para obtener información sobre
             las opiniones de los clientes:
           </p>
           <ul class="cs-list">
-            <li><strong>Información interna:</strong> pregunté a la empresa qué problemas veían ellos para tener que hacer un rediseño, también si el equipo de atención al cliente o abogados habían escuchado opiniones sobre la app.</li>
-            <li><strong>Reseñas en la app store:</strong> miré la store de la aplicación para leer las reseñas.</li>
-            <li><strong>Tests de guerrilla:</strong> hice 5 tests con familiares, compañeros de trabajo y amigos, pidiéndoles que hagan alguna de las tareas que se les pide a los clientes mientras comentaban sus pensamientos en voz alta.</li>
-            <li><strong>Evaluación heurística:</strong> hice una evaluación para identificar problemas de usabilidad.</li>
+            <li data-i18n="legal.research.l1" data-i18n-html><strong>Información interna:</strong> pregunté a la empresa qué problemas veían ellos para tener que hacer un rediseño, también si el equipo de atención al cliente o abogados habían escuchado opiniones sobre la app.</li>
+            <li data-i18n="legal.research.l2" data-i18n-html><strong>Reseñas en la app store:</strong> miré la store de la aplicación para leer las reseñas.</li>
+            <li data-i18n="legal.research.l3" data-i18n-html><strong>Tests de guerrilla:</strong> hice 5 tests con familiares, compañeros de trabajo y amigos, pidiéndoles que hagan alguna de las tareas que se les pide a los clientes mientras comentaban sus pensamientos en voz alta.</li>
+            <li data-i18n="legal.research.l4" data-i18n-html><strong>Evaluación heurística:</strong> hice una evaluación para identificar problemas de usabilidad.</li>
           </ul>
 
           <div class="cs-figure" style="margin-top:.5rem">
@@ -103,35 +101,36 @@
               <img
                 src="assets/abogados/antes2.jpg"
                 alt="Estado anterior de la aplicación móvil"
+                data-i18n-alt="legal.research.before.alt"
               />
             </div>
-            <figcaption>Estado anterior de la app — antes del rediseño</figcaption>
+            <figcaption data-i18n="legal.research.before.caption">Estado anterior de la app — antes del rediseño</figcaption>
           </div>
 
-          <h3 class="cs-h3">Evaluación heurística</h3>
-          <p>Problemas identificados durante la evaluación:</p>
+          <h3 class="cs-h3" data-i18n="legal.heuristic.title">Evaluación heurística</h3>
+          <p data-i18n="legal.heuristic.p1">Problemas identificados durante la evaluación:</p>
           <ul class="cs-list cs-list--compact">
-            <li>Inconsistencias en el uso de valor de líneas y colores, lo que genera confusión visual</li>
-            <li>El tamaño de la tipografía es demasiado pequeño, dificultando la lectura</li>
-            <li>Los botones presentan una jerarquía similar, lo que hace difícil diferenciar cuáles son las acciones primarias y secundarias, afectando la claridad en la toma de decisiones del usuario</li>
-            <li>Falta de una jerarquía visual clara, lo que dificulta la navegación</li>
-            <li>El menú es poco visible, lo que complica el acceso a las funciones principales y el usuario no sabe identificar dónde se encuentra en cada momento</li>
-            <li>No se muestra de manera clara en qué fase del procedimiento se encuentra el usuario y cuáles son los pasos que tiene que seguir</li>
+            <li data-i18n="legal.heuristic.l1">Inconsistencias en el uso de valor de líneas y colores, lo que genera confusión visual</li>
+            <li data-i18n="legal.heuristic.l2">El tamaño de la tipografía es demasiado pequeño, dificultando la lectura</li>
+            <li data-i18n="legal.heuristic.l3">Los botones presentan una jerarquía similar, lo que hace difícil diferenciar cuáles son las acciones primarias y secundarias, afectando la claridad en la toma de decisiones del usuario</li>
+            <li data-i18n="legal.heuristic.l4">Falta de una jerarquía visual clara, lo que dificulta la navegación</li>
+            <li data-i18n="legal.heuristic.l5">El menú es poco visible, lo que complica el acceso a las funciones principales y el usuario no sabe identificar dónde se encuentra en cada momento</li>
+            <li data-i18n="legal.heuristic.l6">No se muestra de manera clara en qué fase del procedimiento se encuentra el usuario y cuáles son los pasos que tiene que seguir</li>
           </ul>
 
-          <h3 class="cs-h3">Problemas identificados</h3>
-          <p>Con estos métodos llegué a identificar 3 problemas claves:</p>
+          <h3 class="cs-h3" data-i18n="legal.problems.title">Problemas identificados</h3>
+          <p data-i18n="legal.problems.p1">Con estos métodos llegué a identificar 3 problemas claves:</p>
           <div class="cs-problems">
             <div class="cs-problem">
-              <h3>Información poco clara</h3>
-              <p>
+              <h3 data-i18n="legal.problems.p1.title">Información poco clara</h3>
+              <p data-i18n="legal.problems.p1.text">
                 Los usuarios no entendían bien el proceso legal ni los pasos a seguir, lo que generaba
                 confusión y necesidad de soporte adicional.
               </p>
             </div>
             <div class="cs-problem">
-              <h3>Diseño visual desfasado</h3>
-              <p>
+              <h3 data-i18n="legal.problems.p2.title">Diseño visual desfasado</h3>
+              <p data-i18n="legal.problems.p2.text">
                 La apariencia de la aplicación no solo se veía anticuada, sino que también contribuía
                 a la dificultad de uso. La falta de jerarquía visual, el uso ineficiente del espacio
                 y una paleta de colores poco diferenciada hacían que la información no destacara
@@ -139,8 +138,8 @@
               </p>
             </div>
             <div class="cs-problem">
-              <h3>Navegación confusa</h3>
-              <p>
+              <h3 data-i18n="legal.problems.p3.title">Navegación confusa</h3>
+              <p data-i18n="legal.problems.p3.text">
                 La estructura de la aplicación no permitía a los usuarios localizar fácilmente su fase
                 actual dentro del procedimiento ni acceder rápidamente a información clave, como pagos
                 y tickets. La distribución de los menús y opciones resultaba poco intuitiva, lo que
@@ -153,55 +152,55 @@
 
       <!-- Definición -->
       <section class="cs-section" data-fade>
-        <div class="cs-section__label">Definición</div>
+        <div class="cs-section__label" data-i18n="legal.definition.label">Definición</div>
         <div class="cs-section__content">
-          <h2 class="cs-h2">Estructura de la aplicación</h2>
-          <h3 class="cs-h3">Historias de usuario</h3>
-          <p>
+          <h2 class="cs-h2" data-i18n="legal.definition.title">Estructura de la aplicación</h2>
+          <h3 class="cs-h3" data-i18n="legal.definition.stories">Historias de usuario</h3>
+          <p data-i18n="legal.definition.p1">
             Para ayudar a entender y definir los requisitos de los usuarios creé varias historias de
             usuario con sus necesidades.
           </p>
           <div class="cs-stories-grid">
-            <img src="assets/abogados/historias/historia-de-usuario-1.webp" alt="Historia de usuario 1" loading="lazy" />
-            <img src="assets/abogados/historias/historia-de-usuario-2.webp" alt="Historia de usuario 2" loading="lazy" />
-            <img src="assets/abogados/historias/historia-de-usuario-3.webp" alt="Historia de usuario 3" loading="lazy" />
-            <img src="assets/abogados/historias/historia-de-usuario-4.webp" alt="Historia de usuario 4" loading="lazy" />
-            <img src="assets/abogados/historias/historia-de-usuario-5.webp" alt="Historia de usuario 5" loading="lazy" />
-            <img src="assets/abogados/historias/historia-de-usuario-6.webp" alt="Historia de usuario 6" loading="lazy" />
-            <img src="assets/abogados/historias/historia-de-usuario-7.webp" alt="Historia de usuario 7" loading="lazy" />
-            <img src="assets/abogados/historias/historia-de-usuario-8.webp" alt="Historia de usuario 8" loading="lazy" />
-            <img src="assets/abogados/historias/historia-de-usuario-9.webp" alt="Historia de usuario 9" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-1.webp" alt="Historia de usuario 1" data-i18n-alt="legal.definition.story1.alt" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-2.webp" alt="Historia de usuario 2" data-i18n-alt="legal.definition.story2.alt" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-3.webp" alt="Historia de usuario 3" data-i18n-alt="legal.definition.story3.alt" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-4.webp" alt="Historia de usuario 4" data-i18n-alt="legal.definition.story4.alt" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-5.webp" alt="Historia de usuario 5" data-i18n-alt="legal.definition.story5.alt" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-6.webp" alt="Historia de usuario 6" data-i18n-alt="legal.definition.story6.alt" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-7.webp" alt="Historia de usuario 7" data-i18n-alt="legal.definition.story7.alt" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-8.webp" alt="Historia de usuario 8" data-i18n-alt="legal.definition.story8.alt" loading="lazy" />
+            <img src="assets/abogados/historias/historia-de-usuario-9.webp" alt="Historia de usuario 9" data-i18n-alt="legal.definition.story9.alt" loading="lazy" />
           </div>
         </div>
       </section>
 
       <!-- Soluciones -->
       <section class="cs-section cs-section--full" data-fade>
-        <div class="cs-section__label">Soluciones</div>
+        <div class="cs-section__label" data-i18n="legal.solutions.label">Soluciones</div>
         <div class="cs-section__content cs-section__content--wide">
-          <h2 class="cs-h2">Diseño final</h2>
+          <h2 class="cs-h2" data-i18n="legal.solutions.title">Diseño final</h2>
 
           <div class="cs-feature-rows">
           <article class="cs-feature-row">
             <div class="cs-feature-row__media">
               <div class="cs-video">
-                <video autoplay loop muted playsinline preload="metadata" aria-label="Pantalla principal de la app">
+                <video autoplay loop muted playsinline preload="metadata" controls data-i18n-aria="legal.video.home" aria-label="Demostración de la pantalla principal de la app">
                   <source src="assets/abogados/videos/principal-app.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
             <div class="cs-feature-row__body">
-              <h3 class="cs-h3">Pantalla principal</h3>
-              <p>
+              <h3 class="cs-h3" data-i18n="legal.solution.home.title">Pantalla principal</h3>
+              <p data-i18n="legal.solution.home.p1">
                 Simplifiqué la pantalla principal para que los usuarios accedan rápidamente a las
                 funciones clave sin distracciones. Destaqué las opciones más utilizadas y agregué un
                 acceso directo a las consultas en curso. Además, optimicé el diseño visual con una
                 jerarquía clara y elementos bien espaciados para mejorar la legibilidad.
               </p>
               <ul class="cs-feature__list cs-feature__list--checks">
-                <li><i class="ph ph-check" aria-hidden="true"></i> Accesos directos a funciones esenciales</li>
-                <li><i class="ph ph-check" aria-hidden="true"></i> Diseño más limpio y moderno</li>
-                <li><i class="ph ph-check" aria-hidden="true"></i> Información relevante a primera vista</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.home.l1">Accesos directos a funciones esenciales</span></li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.home.l2">Diseño más limpio y moderno</span></li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.home.l3">Información relevante a primera vista</span></li>
               </ul>
             </div>
           </article>
@@ -209,14 +208,14 @@
           <article class="cs-feature-row cs-feature-row--reverse">
             <div class="cs-feature-row__media">
               <div class="cs-video">
-                <video autoplay loop muted playsinline preload="metadata" aria-label="Seguimiento del proceso">
+                <video autoplay loop muted playsinline preload="metadata" controls data-i18n-aria="legal.video.process" aria-label="Demostración del seguimiento del proceso">
                   <source src="assets/abogados/videos/procedimiento.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
             <div class="cs-feature-row__body">
-              <h3 class="cs-h3">Seguimiento del proceso</h3>
-              <p>
+              <h3 class="cs-h3" data-i18n="legal.solution.process.title">Seguimiento del proceso</h3>
+              <p data-i18n="legal.solution.process.p1">
                 Uno de los principales problemas detectados fue la falta de claridad en el estado de
                 los trámites. Para solucionarlo, creé una pantalla que muestra los pasos del proceso,
                 con su descripción, tiempos aproximados que dura cada paso y su estado actual. También
@@ -224,9 +223,9 @@
                 que realizar alguna acción. Además incorporé un botón de contacto por si hay alguna duda.
               </p>
               <ul class="cs-feature__list cs-feature__list--checks">
-                <li><i class="ph ph-check" aria-hidden="true"></i> Pasos del proceso con descripciones, tiempos estimados y estados visibles (En proceso, Completado)</li>
-                <li><i class="ph ph-check" aria-hidden="true"></i> Sección de fase actual con instrucciones a realizar</li>
-                <li><i class="ph ph-check" aria-hidden="true"></i> Botón de contacto para resolver dudas</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.process.l1">Pasos del proceso con descripciones, tiempos estimados y estados visibles (En proceso, Completado)</span></li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.process.l2">Sección de fase actual con instrucciones a realizar</span></li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.process.l3">Botón de contacto para resolver dudas</span></li>
               </ul>
             </div>
           </article>
@@ -234,22 +233,22 @@
           <article class="cs-feature-row">
             <div class="cs-feature-row__media">
               <div class="cs-video">
-                <video autoplay loop muted playsinline preload="metadata" aria-label="Pantalla de documentación">
+                <video autoplay loop muted playsinline preload="metadata" controls data-i18n-aria="legal.video.docs" aria-label="Demostración de la pantalla de documentación">
                   <source src="assets/abogados/videos/documentos.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
             <div class="cs-feature-row__body">
-              <h3 class="cs-h3">Documentación</h3>
-              <p>
+              <h3 class="cs-h3" data-i18n="legal.solution.docs.title">Documentación</h3>
+              <p data-i18n="legal.solution.docs.p1">
                 El proceso de carga de documentos y formularios era confuso, lo que generaba errores
                 frecuentes. Rediseñé la interfaz con instrucciones paso a paso y validaciones en tiempo
                 real para evitar problemas. Además, mejoré la visualización de los documentos subidos.
               </p>
               <ul class="cs-feature__list cs-feature__list--checks">
-                <li><i class="ph ph-check" aria-hidden="true"></i> Estado del documento, si está pendiente o completado</li>
-                <li><i class="ph ph-check" aria-hidden="true"></i> Ejemplo de documento y explicación de lo que tiene que subir</li>
-                <li><i class="ph ph-check" aria-hidden="true"></i> Opción de escanear documentos y luego editar la información</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.docs.l1">Estado del documento, si está pendiente o completado</span></li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.docs.l2">Ejemplo de documento y explicación de lo que tiene que subir</span></li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.docs.l3">Opción de escanear documentos y luego editar la información</span></li>
               </ul>
             </div>
           </article>
@@ -257,22 +256,22 @@
           <article class="cs-feature-row cs-feature-row--reverse">
             <div class="cs-feature-row__media">
               <div class="cs-video">
-                <video autoplay loop muted playsinline preload="metadata" aria-label="Pantalla de consultas">
+                <video autoplay loop muted playsinline preload="metadata" controls data-i18n-aria="legal.video.chat" aria-label="Demostración de la pantalla de consultas">
                   <source src="assets/abogados/videos/consultas.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
             <div class="cs-feature-row__body">
-              <h3 class="cs-h3">Consultas</h3>
-              <p>
+              <h3 class="cs-h3" data-i18n="legal.solution.chat.title">Consultas</h3>
+              <p data-i18n="legal.solution.chat.p1">
                 Reorganicé la sección de consultas para que los usuarios puedan hacer preguntas a los
                 abogados de forma más intuitiva. Simplifiqué el formulario de consulta y añadí respuestas
                 rápidas basadas en preguntas frecuentes para agilizar el proceso.
               </p>
               <ul class="cs-feature__list cs-feature__list--checks">
-                <li><i class="ph ph-check" aria-hidden="true"></i> Formulario más accesible y directo</li>
-                <li><i class="ph ph-check" aria-hidden="true"></i> Preguntas frecuentes para resolver dudas al instante</li>
-                <li><i class="ph ph-check" aria-hidden="true"></i> Chat con abogados con respuestas en tiempo real</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.chat.l1">Formulario más accesible y directo</span></li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.chat.l2">Preguntas frecuentes para resolver dudas al instante</span></li>
+                <li><i class="ph ph-check" aria-hidden="true"></i> <span data-i18n="legal.solution.chat.l3">Chat con abogados con respuestas en tiempo real</span></li>
               </ul>
             </div>
           </article>
@@ -282,19 +281,19 @@
 
       <!-- Aprendizajes -->
       <section class="cs-section" data-fade>
-        <div class="cs-section__label">Conclusiones</div>
+        <div class="cs-section__label" data-i18n="legal.conclusions.label">Conclusiones</div>
         <div class="cs-section__content">
-          <h2 class="cs-h2">Aprendizajes</h2>
-          <p>
+          <h2 class="cs-h2" data-i18n="legal.conclusions.title">Aprendizajes</h2>
+          <p data-i18n="legal.conclusions.p1">
             Este proyecto tenía varios retos que afrontar, entre ellos la falta de tiempo y recursos
             que había. Estas son algunas de las conclusiones y aprendizajes al haber podido realizar
             este rediseño:
           </p>
           <ul class="cs-list">
-            <li><strong>Comunicación con stakeholders.</strong> Preguntar al cliente sobre la intención del rediseño y recopilar opiniones de los usuarios fue fundamental para identificar problemas de usabilidad.</li>
-            <li><strong>Adaptar la investigación.</strong> Dado que no había tiempo para una investigación extensa, fue necesario buscar métodos rápidos y efectivos para detectar problemas sin comprometer la calidad del análisis.</li>
-            <li><strong>Retroalimentación con desarrollo.</strong> Se trabajó en conjunto con el equipo de desarrollo, entregando las pantallas en fases para agilizar la implementación. Definir diferentes estados para los componentes y mantener una comunicación fluida fueron aspectos clave en este proceso.</li>
-            <li><strong>La importancia para el usuario de saber en qué momento del proceso se encuentra.</strong> En el ámbito legal, los trámites pueden ser largos, y los usuarios no quieren sentirse perdidos o en espera indefinida. Mostrar en qué etapa se encuentra su caso y cuánto tiempo puede tomar cada paso resultó ser un factor crucial para mejorar la experiencia del usuario.</li>
+            <li data-i18n="legal.conclusions.l1" data-i18n-html><strong>Comunicación con stakeholders.</strong> Preguntar al cliente sobre la intención del rediseño y recopilar opiniones de los usuarios fue fundamental para identificar problemas de usabilidad.</li>
+            <li data-i18n="legal.conclusions.l2" data-i18n-html><strong>Adaptar la investigación.</strong> Dado que no había tiempo para una investigación extensa, fue necesario buscar métodos rápidos y efectivos para detectar problemas sin comprometer la calidad del análisis.</li>
+            <li data-i18n="legal.conclusions.l3" data-i18n-html><strong>Retroalimentación con desarrollo.</strong> Se trabajó en conjunto con el equipo de desarrollo, entregando las pantallas en fases para agilizar la implementación. Definir diferentes estados para los componentes y mantener una comunicación fluida fueron aspectos clave en este proceso.</li>
+            <li data-i18n="legal.conclusions.l4" data-i18n-html><strong>La importancia para el usuario de saber en qué momento del proceso se encuentra.</strong> En el ámbito legal, los trámites pueden ser largos, y los usuarios no quieren sentirse perdidos o en espera indefinida. Mostrar en qué etapa se encuentra su caso y cuánto tiempo puede tomar cada paso resultó ser un factor crucial para mejorar la experiencia del usuario.</li>
           </ul>
         </div>
       </section>
@@ -302,12 +301,12 @@
       <!-- Nav entre proyectos -->
       <div class="cs-nav-projects" data-fade>
         <a href="proyecto-data.html" class="cs-nav-projects__prev">
-          <span class="cs-nav-projects__dir"><i class="ph ph-arrow-left" aria-hidden="true"></i> Anterior</span>
-          <span class="cs-nav-projects__name">Dat·A — Branding y diseño web</span>
+          <span class="cs-nav-projects__dir"><i class="ph ph-arrow-left" aria-hidden="true"></i> <span data-i18n="legal.nav.previous">Anterior</span></span>
+          <span class="cs-nav-projects__name" data-i18n="legal.nav.previousProject">Dat·A — Branding y diseño web</span>
         </a>
         <a href="proyecto-filtros.html" class="cs-nav-projects__next">
-          <span class="cs-nav-projects__dir">Siguiente <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
-          <span class="cs-nav-projects__name">Rediseño de la experiencia de filtrado</span>
+          <span class="cs-nav-projects__dir"><span data-i18n="legal.nav.next">Siguiente</span> <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+          <span class="cs-nav-projects__name" data-i18n="legal.nav.nextProject">Rediseño de la experiencia de filtrado</span>
         </a>
       </div>
 
@@ -318,6 +317,9 @@
   <div id="site-footer"></div>
 
   <script src="icons.js"></script>
+  <script src="i18n-en.js"></script>
+  <script src="i18n.js"></script>
+  <script src="a11y.js"></script>
   <script src="components.js"></script>
   <script src="script.js"></script>
 </body>
